@@ -1,25 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import JsonUploader from "./components/uploader";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    console.log(localStorage.getItem('runes'));
+    console.log(localStorage.getItem('monsters'));
+      return (
+          <div className="App">
+            <header className="App-header">
+              <h1>JSON Manipulator</h1>
+              <JsonUploader />
+            </header>
+          </div>
+      );
 }
 
 export default App;
