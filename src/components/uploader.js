@@ -1,14 +1,36 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import Rune from "../Rune";
 import Monster from "../Monster";
 import monstersData from '../data/monsters_data.json';
+import RuneComponent from "./rune_component";
 
 const JsonUploader = () => {
-    const [jsonData, setJsonData] = useState(null);
+    const [runes, setRunes] = useState([]);
+    const [monsters, setMonsters] = useState([]);
+
+    useEffect(() => {
+        // Load runes from local storage
+        const storedRunes = localStorage.getItem('runes');
+        if (storedRunes) {
+            const parsedRunes = JSON.parse(storedRunes);
+            setRunes(Object.values(parsedRunes)); // Convert the object to an array
+        }
+        const storedMonsters = localStorage.getItem('monsters');
+        if (storedMonsters) {
+            const parsedMonsters = JSON.parse(storedMonsters);
+            setMonsters(Object.values(storedMonsters)); // Convert the object to an array
+        }
+    }, []);
+
+    const clearData = () => {
+        setRunes([]);
+        localStorage.removeItem('runes');
+        localStorage.removeItem('monsters');
+    };
 
     const handleFileUpload = (event) => {
         const file = event.target.files[0];
-        const reader = new FileReader();
+        const reader = new FileReader(file);
         const runeset = {}
         const monsterset = {}
 
@@ -16,7 +38,6 @@ const JsonUploader = () => {
 
         reader.onload = async (e) => {
             const data = JSON.parse(e.target.result);
-            setJsonData(data['unit_list']);
             for (let datumKey in data['unit_list']) {
 
                 // Get the rights elements
@@ -34,31 +55,40 @@ const JsonUploader = () => {
             }
             localStorage.setItem('userData', JSON.stringify(data['unit_list']));
 
-            console.log(JSON.stringify(runeset));
+
             localStorage.setItem('runes', JSON.stringify(runeset));
 
             localStorage.setItem('monsters', JSON.stringify(monsterset));
+
+            const storedRunes = localStorage.getItem('runes');
+            if (storedRunes) {
+                const parsedRunes = JSON.parse(storedRunes);
+                setRunes(Object.values(parsedRunes)); // Convert the object to an array
+            }
         };
         reader.readAsText(file);
     };
 
-    const clearData = () => {
-        setJsonData(null);
-        localStorage.removeItem('runes');
-        localStorage.removeItem('monsters');
-    };
-
     return (
         <div>
-            <h2>Upload and Manipulate JSON Data</h2>
-            <input type="file" accept=".json" onChange={handleFileUpload} />
-            <button onClick={clearData}>Clear Data</button>
-            {jsonData && (
-                <div>
-                    <h3>JSON Data:</h3>
-                    <pre>{JSON.stringify(jsonData, null, 2)}</pre>
-                </div>
-            )}
+
+            <div style={{padding: '20px'}}>
+                <h1>Your Runes</h1>
+                <button onClick={clearData}>Clear Data</button>
+                {runes.length === 0 ? (
+                    <div>
+                        <p>No runes to display. Please upload a JSON file.</p>
+                        <input type="file" accept=".json" onChange={handleFileUpload}/>
+                    </div>
+                ) : (
+                    <div style={{marginTop: '20px'}}>
+                        {runes.map((rune) => (
+                            <RuneComponent key={rune.rune_id} data={rune}/>
+                        ))}
+                    </div>
+                )}
+            </div>
+
         </div>
     );
 };
