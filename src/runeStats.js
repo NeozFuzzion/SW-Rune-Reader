@@ -26,7 +26,11 @@ const runeStats = {
         proc_sub4: 225,
         proc_sub5: 300,
         proc_sub6: 375,
-        name: 'HP flat'
+        min_hero: 230,
+        max_hero: 450,
+        min_leg: 430,
+        max_leg: 550,
+        name: 'HP'
     },
     2: {
         id_stat: 2,
@@ -54,6 +58,10 @@ const runeStats = {
         proc_sub4: 6,
         proc_sub5: 7,
         proc_sub6: 8,
+        min_hero: 4,
+        max_hero: 7,
+        min_leg: 5,
+        max_leg: 10,
         name: 'HP%'
     },
     3: {
@@ -82,7 +90,11 @@ const runeStats = {
         proc_sub4: 10,
         proc_sub5: 15,
         proc_sub6: 20,
-        name: 'ATK flat'
+        min_hero: 12,
+        max_hero: 22,
+        min_leg: 18,
+        max_leg: 30,
+        name: 'ATK'
     },
     4: {
         id_stat: 4,
@@ -110,6 +122,10 @@ const runeStats = {
         proc_sub4: 6,
         proc_sub5: 7,
         proc_sub6: 8,
+        min_hero: 4,
+        max_hero: 7,
+        min_leg: 5,
+        max_leg: 10,
         name: 'ATK%'
     },
     5: {
@@ -138,7 +154,11 @@ const runeStats = {
         proc_sub4: 10,
         proc_sub5: 15,
         proc_sub6: 20,
-        name: 'DEF flat'
+        min_hero: 12,
+        max_hero: 22,
+        min_leg: 18,
+        max_leg: 30,
+        name: 'DEF'
     },
     6: {
         id_stat: 6,
@@ -166,6 +186,10 @@ const runeStats = {
         proc_sub4: 6,
         proc_sub5: 7,
         proc_sub6: 8,
+        min_hero: 4,
+        max_hero: 7,
+        min_leg: 5,
+        max_leg: 10,
         name: 'DEF%'
     },
     8: {
@@ -194,6 +218,10 @@ const runeStats = {
         proc_sub4: 4,
         proc_sub5: 5,
         proc_sub6: 6,
+        min_hero: 3,
+        max_hero: 4,
+        min_leg: 4,
+        max_leg: 5,
         name: 'SPD'
     },
     9: {
@@ -222,6 +250,10 @@ const runeStats = {
         proc_sub4: 4,
         proc_sub5: 5,
         proc_sub6: 6,
+        min_hero: 0,
+        max_hero: 0,
+        min_leg: 0,
+        max_leg: 0,
         name: 'CRate'
     },
     10: {
@@ -250,6 +282,10 @@ const runeStats = {
         proc_sub4: 5,
         proc_sub5: 5,
         proc_sub6: 7,
+        min_hero: 0,
+        max_hero: 0,
+        min_leg: 0,
+        max_leg: 0,
         name: 'CDmg'
     },
     11: {
@@ -278,6 +314,10 @@ const runeStats = {
         proc_sub4: 6,
         proc_sub5: 7,
         proc_sub6: 8,
+        min_hero: 0,
+        max_hero: 0,
+        min_leg: 0,
+        max_leg: 0,
         name: 'RES'
     },
     12: {
@@ -306,6 +346,10 @@ const runeStats = {
         proc_sub4: 6,
         proc_sub5: 7,
         proc_sub6: 8,
+        min_hero: 0,
+        max_hero: 0,
+        min_leg: 0,
+        max_leg: 0,
         name: 'ACC'
     }
 };

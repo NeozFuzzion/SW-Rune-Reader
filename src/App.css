@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +37,174 @@
     transform: rotate(360deg);
   }
 }
+
+.rune-header{
+  width: 380px;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.rune-img-main{
+  display: flex;
+}
+
+.rune-main{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.rune-slot1 {
+  position: absolute;
+  z-index: 2;
+  padding-left: 17px;
+  padding-top: 13px;
+}
+
+.rune-slot2 {
+  position: absolute;
+  z-index: 2;
+  padding-left: 15px;
+  padding-top: 23px;
+}
+
+.rune-slot3 {
+  position: absolute;
+  z-index: 2;
+  padding-left: 14px;
+  padding-top: 21px;
+}
+
+.rune-slot4 {
+  position: absolute;
+  z-index: 2;
+  padding-left: 17px;
+  padding-top: 21px;
+}
+
+.rune-slot5 {
+  position: absolute;
+  z-index: 2;
+  padding-left: 11px;
+  padding-top: 23px;
+}
+
+.rune-slot6 {
+  position: absolute;
+  z-index: 2;
+  padding-left: 12px;
+  padding-top: 23px;
+}
+
+.rune-set {
+  position: absolute;
+  z-index: 3;
+  padding-left: 8px;
+  scale: 0.5;
+  padding-top: 12px;
+}
+
+.rune-class {
+  position: absolute;
+}
+
+.div-rune-img {
+  display: flex;
+  flex-direction: row;
+  scale: 0.7;
+  width: 80px;
+  height: 80px;
+}
+
+.star{
+  position: relative;
+}
+
+.stars {
+  position: absolute;
+  z-index: 4;
+  scale: 0.5;
+  left: -66px;
+  top: -5px;
+  width: 232px;
+}
+
+.monster{
+  width: 54px;
+}
+
+/* Position each image with increasing left offset */
+.stars img:nth-child(2) {
+  left: -10px;
+}
+
+.stars img:nth-child(3) {
+  left: -20px;
+}
+
+.stars img:nth-child(4) {
+  left: -30px;
+}
+
+.stars img:nth-child(5) {
+  left: -40px;
+}
+
+.stars img:nth-child(6) {
+  left: -50px;
+}
+
+span, div{
+  font-size: calc(10px + 1vmin);
+}
+
+p{
+  margin: 5px;
+}
+
+.horizontal-slider {
+  width: 200px;
+  height: 25px;
+  margin-bottom: 20px;
+}
+
+.thumb {
+  height: 25px;
+  width: 25px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #555;
+}
+
+.track {
+  top: 50%;
+  height: 8px;
+  background: #888;
+  border-radius: 4px;
+}
+
+.border_rune{
+  border:2px solid;
+  border-radius: 8px;
+}
+
+.border_rune1, .border_rune11{
+  border-color: #555;
+}
+
+.border_rune2, .border_rune12{
+  border-color: rgba(32, 188, 0, 0.76);
+}
+
+.border_rune3, .border_rune13{
+  border-color: rgba(0, 160, 188, 0.76);
+}
+.border_rune4, .border_rune14{
+  border-color: rgba(125, 0, 188, 0.76);
+}
+.border_rune5, .border_rune15{
+  border-color: rgba(188, 128, 0, 0.73);
+}
+
