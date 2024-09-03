@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rune-reader/static/css/main.ff9af004.css",
+    "main.js": "/rune-reader/static/js/main.0e189cf2.js",
+    "static/js/453.72cae288.chunk.js": "/rune-reader/static/js/453.72cae288.chunk.js",
+    "index.html": "/rune-reader/index.html",
+    "main.ff9af004.css.map": "/rune-reader/static/css/main.ff9af004.css.map",
+    "main.0e189cf2.js.map": "/rune-reader/static/js/main.0e189cf2.js.map",
+    "453.72cae288.chunk.js.map": "/rune-reader/static/js/453.72cae288.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff9af004.css",
+    "static/js/main.0e189cf2.js"
+  ]
+}
