@@ -9,10 +9,9 @@ function App() {
       return (
           <div className="App">
               <header className="App-header">
-                  <h1>JSON Manipulator</h1>
-                  <JsonUploader/>
-
+                  <h3>JSON Manipulator by NeozFuzzion</h3>
               </header>
+              <JsonUploader/>
           </div>
 
       );

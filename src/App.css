@@ -1,8 +1,14 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+
+  color: white;
+  background-color: #282c34;
 }
 
-
+.select__multi-value__label{
+  color: white;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -15,8 +21,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,7 +168,7 @@ p{
 }
 
 .horizontal-slider {
-  width: 200px;
+  width: 300px;
   height: 25px;
   margin-bottom: 20px;
 }
@@ -172,16 +176,16 @@ p{
 .thumb {
   height: 25px;
   width: 25px;
-  background-color: #ddd;
+  background-color: #61dafb;
   border-radius: 50%;
   cursor: pointer;
-  border: 2px solid #555;
+  border: 2px solid #61dafb;
 }
 
 .track {
   top: 50%;
   height: 8px;
-  background: #888;
+  background: #61dafb;
   border-radius: 4px;
 }
 
@@ -208,3 +212,106 @@ p{
   border-color: rgba(188, 128, 0, 0.73);
 }
 
+.filter{
+  display: flex;
+  width: 50%;
+  min-width: 300px;
+}
+
+.filters{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.select_filter{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter_name{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter_efficiency_couple{
+
+  margin: 20px;
+}
+
+.filter_efficiency{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.filter_efficiency_name{
+
+}
+
+
+.basic-multi-select, .select{
+  width: 80%;
+}
+.filter_sliders{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+select {
+  background-color: #282c34;
+  color: white;
+  border: 1px solid #61dafb;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-left: 20px; /* Space from the left */
+  font-size: 16px; /* Font size for readability */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Optional: Add hover and focus states for better interactivity */
+select:hover, select:focus {
+  outline: none;
+}
+
+button{
+  all: unset;
+  background-color: #282c34;
+  color: white;
+  border: 1px solid #61dafb;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  margin-left: 20px;
+}
+
+input[type="file"] {
+  background-color: #282c34;
+  color: white;
+  border: 1px solid #61dafb;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-left: 20px; /* Space from the left */
+  font-size: 16px; /* Font size for readability */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  display: inline-block; /* Ensure proper display and alignment */
+  width: auto; /* Adjust width as needed */
+  text-align: center; /* Center text */
+}
+
+/* Optional: Add hover and focus states for better interactivity */
+input[type="file"]:hover,
+input[type="file"]:focus {
+  outline: none;
+  border-color: #21a1f1; /* Slightly lighter border color on hover/focus */
+  background-color: #2b323e; /* Slightly lighter background color on hover/focus */
+}
