@@ -43,10 +43,11 @@
 }
 
 .rune-header{
-  width: 380px;
+  width: 330px;
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 60px;
+  align-items: center;
 }
 
 .rune-img-main{
@@ -57,6 +58,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-top: 10px;
 }
 
 .rune-slot1 {
@@ -126,12 +128,14 @@
 }
 
 .stars {
+  display: flex;
   position: absolute;
   z-index: 4;
   scale: 0.5;
-  left: -66px;
+  left: -55px;
   top: -5px;
   width: 232px;
+  justify-content: flex-start;
 }
 
 .monster{
@@ -210,6 +214,10 @@ p{
 }
 .border_rune5, .border_rune15{
   border-color: rgba(188, 128, 0, 0.73);
+}
+
+.border_rune15, .border_rune14, .border_rune13, .border_rune12, .border_rune11{
+  box-shadow: 0px 0px 5px 2px #888;
 }
 
 .filter{
@@ -315,3 +323,49 @@ input[type="file"]:focus {
   border-color: #21a1f1; /* Slightly lighter border color on hover/focus */
   background-color: #2b323e; /* Slightly lighter background color on hover/focus */
 }
+
+
+.notgemmed,.gemmed{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+.runes{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rune-title{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.rune-title img{
+  margin-left: 8px;
+}
+
+.rune-main-substat{
+  font-size: calc(8px + 1vh);
+}
+
+.rune-main-stat{
+  font-size: calc(9px + 1vh);
+}
+
+.rune_substats span, .rune_substats div, .rune_efficiency span, .rune_efficiency div{
+  font-size: calc(7px + 1vh);
+}
+
+
+
+.rune_substats{
+  margin: 10px;
+  box-shadow: 10px 0 5px -5px #272727;
+}
+

@@ -456,7 +456,7 @@ const JsonUploader = () => {
                         </select>
                     </div>
 
-                    <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'}}>
+                    <div className="runes">
                         {currentRunes.map((rune) => (
                             <RuneComponent key={rune.rune_id} rune={rune} monster={monsters[rune.occupied_id]}/>
                         ))}
