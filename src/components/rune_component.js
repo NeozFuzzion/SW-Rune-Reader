@@ -6,6 +6,7 @@ const RuneComponent = ({rune, monster}) => {
     return (
         <div style={{padding: '10px', margin: '10px', width: '350px'}}
              className={"border_rune " + `border_rune${rune.rank}`}>
+            {console.log(rune.rank, rune.runeclass, rune.shuffleit)}
             <div style={{marginBottom: '10px'}}>
                 <span className="rune-title">+{rune.upgrade_curr} {rune.set_name} ({rune.slot_no})  {rune.ancient ===1 && <img src="runes/ancient.png"/>}</span>
             </div>
@@ -13,7 +14,7 @@ const RuneComponent = ({rune, monster}) => {
                 <div className="rune-img-main">
                     <div className="div-rune-img">
                         <img className="rune-set" src={`runes/${runeSets[rune.set_id].image}`}/>
-                        <img className="rune-class" src={`runes/${rune.rank % 10}.png`}/>
+                        <img className="rune-class" src={`runes/${rune.extra % 10}.png`}/>
                         <img className={`rune-slot${rune.slot_no}`} src={`runes/rune${rune.slot_no}.png`}/>
                         <div className="stars">
                             {[...Array(rune.runeclass % 10)].map((_, index) => (

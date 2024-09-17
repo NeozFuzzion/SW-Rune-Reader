@@ -183,7 +183,7 @@ const JsonUploader = () => {
     const handleSortOrderChange = (attribute) => {
         setSortOrder((prevSortOrder) => ({
             attribute,
-            direction: prevSortOrder.direction === 'asc' ? 'desc' : 'asc'
+            direction: prevSortOrder.direction
         }));
     };
 
@@ -439,6 +439,10 @@ const JsonUploader = () => {
                             <option value="efficiency_max_hero">Efficiency Max Hero</option>
                             <option value="efficiency_min_leg">Efficiency Min Leg</option>
                             <option value="efficiency_max_leg">Efficiency Max Leg</option>
+                            <option value="tominhero">Gap Min Hero</option>
+                            <option value="tomaxhero">Gap Max Hero</option>
+                            <option value="tominleg">Gap Min Leg</option>
+                            <option value="tomaxleg">Gap Max Leg</option>
                         </select>
                         <button onClick={() => handleSortOrderChange(sortOrder.attribute)}>
                             {sortOrder.direction === 'asc' ? 'Ascending' : 'Descending'}
@@ -447,7 +451,7 @@ const JsonUploader = () => {
 
                     {/* Select to change items per page */}
                     <div style={{marginTop: '10px'}}>
-                        <label>Items per page: </label>
+                    <label>Items per page: </label>
                         <select value={itemsPerPage} onChange={handleItemsPerPageChange}>
                             <option value={10}>10</option>
                             <option value={20}>20</option>

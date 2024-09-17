@@ -5,6 +5,7 @@ class Rune {
     maxProcEffi = [1/51,1/34,5/102,1/17,7/102,1/14]
     constructor(data) {
         this.rune_id = data['rune_id'];
+        this.shuffleit = data;
         this.occupied_type = data['occupied_type'];
         this.occupied_id = data['occupied_id'];
         this.slot_no = data['slot_no'];
@@ -46,6 +47,10 @@ class Rune {
         this.efficiency_max_hero = this.calcEfficiency(max_hero,data['prefix_eff'],data['pri_eff'],data['class'])*100 + tmp_max;
         this.efficiency_min_leg = this.calcEfficiency(min_leg,data['prefix_eff'],data['pri_eff'],data['class'])*100 + tmp_max;
         this.efficiency_max_leg = this.calcEfficiency(max_leg,data['prefix_eff'],data['pri_eff'],data['class'])*100 + tmp_max;
+        this.tominhero = this.efficiency_min_hero - this.efficiency;
+        this.tominleg = this.efficiency_min_leg - this.efficiency;
+        this.tomaxhero = this.efficiency_max_hero - this.efficiency;
+        this.tomaxleg = this.efficiency_max_leg - this.efficiency;
     }
 
     calcEfficiency(sub_rune,prefix,main,runeclass) {
