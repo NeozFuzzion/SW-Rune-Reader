@@ -31,13 +31,32 @@ class Rune {
             this[`sub${index + 1}_id`] = item[0];
             this[`sub${index + 1}_stat`] = item[1];
             this[`sub${index + 1}_grind`] = item[3];
+            if (this.ancient === 1){
+                max_hero[index] = [item[0],item[1],item[2],runeStats[item[0]]['amax_hero']];
+                min_hero[index] = [item[0],item[1],item[2],runeStats[item[0]]['amin_hero']];
+                min_leg[index] = [item[0],item[1],item[2],runeStats[item[0]]['amin_leg']];
+                max_leg[index] = [item[0],item[1],item[2],runeStats[item[0]]['amax_leg']];
+            } else {
+                max_hero[index] = [item[0],item[1],item[2],runeStats[item[0]]['max_hero']];
+                min_hero[index] = [item[0],item[1],item[2],runeStats[item[0]]['min_hero']];
+                min_leg[index] = [item[0],item[1],item[2],runeStats[item[0]]['min_leg']];
+                max_leg[index] = [item[0],item[1],item[2],runeStats[item[0]]['max_leg']];
+            }
             if (item[2] === 1) {
                 this[`sub_gemme`] = index+1;
+                if (this.ancient === 1){
+                    max_hero[index] = [item[0],runeStats[item[0]]['agemme_max_hero'],item[2],runeStats[item[0]]['amax_hero']];
+                    min_hero[index] = [item[0],runeStats[item[0]]['agemme_min_hero'],item[2],runeStats[item[0]]['amin_hero']];
+                    min_leg[index] = [item[0],runeStats[item[0]]['agemme_min_leg'],item[2],runeStats[item[0]]['amin_leg']];
+                    max_leg[index] = [item[0],runeStats[item[0]]['agemme_max_leg'],item[2],runeStats[item[0]]['amax_leg']];
+                } else {
+                    max_hero[index] = [item[0],runeStats[item[0]]['gemme_max_hero'],item[2],runeStats[item[0]]['max_hero']];
+                    min_hero[index] = [item[0],runeStats[item[0]]['gemme_min_hero'],item[2],runeStats[item[0]]['min_hero']];
+                    min_leg[index] = [item[0],runeStats[item[0]]['gemme_min_leg'],item[2],runeStats[item[0]]['min_leg']];
+                    max_leg[index] = [item[0],runeStats[item[0]]['gemme_max_leg'],item[2],runeStats[item[0]]['max_leg']];
+                }
+
             }
-            max_hero[index] = [item[0],item[1],item[2],runeStats[item[0]]['max_hero']];
-            min_hero[index] = [item[0],item[1],item[2],runeStats[item[0]]['min_hero']];
-            min_leg[index] = [item[0],item[1],item[2],runeStats[item[0]]['min_leg']];
-            max_leg[index] = [item[0],item[1],item[2],runeStats[item[0]]['max_leg']];
         });
         this.extra = data['extra'];
         this.efficiency = this.calcEfficiency(data['sec_eff'],data['prefix_eff'],data['pri_eff'],data['class'])*100;
@@ -56,10 +75,10 @@ class Rune {
     calcEfficiency(sub_rune,prefix,main,runeclass) {
         let sum = runeStats[main[0]][`max_main${runeclass%10}`]/runeStats[main[0]][`max_main6`];
         if (prefix[0] !== 0){
-            sum += prefix[1]/runeStats[prefix[0]][`max_sub${runeclass}`] * (([1,3,5].includes(prefix[0])) ? 0.5 : 1);
+            sum += prefix[1]/runeStats[prefix[0]][`max_sub${runeclass%10}`] * (([1,3,5].includes(prefix[0])) ? 0.5 : 1);
         }
         for (const sumKey in sub_rune) {
-            sum +=  (sub_rune[sumKey][1]+sub_rune[sumKey][3])/runeStats[sub_rune[sumKey][0]][`max_sub${runeclass}`] * (([1,3,5].includes(sub_rune[sumKey][0])) ? 0.5 : 1);
+            sum +=  (sub_rune[sumKey][1]+sub_rune[sumKey][3])/runeStats[sub_rune[sumKey][0]][`max_sub${runeclass%10}`] * (([1,3,5].includes(sub_rune[sumKey][0])) ? 0.5 : 1);
         }
         return sum/2.8;
     }

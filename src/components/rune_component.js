@@ -3,10 +3,10 @@ import runeSets from "../runeSets";
 import runeStats from "../runeStats";
 
 const RuneComponent = ({rune, monster}) => {
+
     return (
         <div style={{padding: '10px', margin: '10px', width: '350px'}}
              className={"border_rune " + `border_rune${rune.rank}`}>
-            {console.log(rune.rank, rune.runeclass, rune.shuffleit)}
             <div style={{marginBottom: '10px'}}>
                 <span className="rune-title">+{rune.upgrade_curr} {rune.set_name} ({rune.slot_no})  {rune.ancient ===1 && <img src="runes/ancient.png"/>}</span>
             </div>
@@ -43,7 +43,7 @@ const RuneComponent = ({rune, monster}) => {
 
                         return (
                             <div key={num}>
-                                {(rune["sub_gemme"] === subId) ? (
+                                {(rune["sub_gemme"] === num) ? (
                                     <div className="gemmed">
                                         {runeStats[subId] && <span style={{
                                             width: 'max-content',
