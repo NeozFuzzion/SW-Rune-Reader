@@ -8,6 +8,8 @@ import RuneComponent from "./rune_component";
 import runeSets from "../runeSets";
 import runeStats from "../runeStats";
 import Pagination from "./pagination";
+import {setItem, getAllItems, clearStore, getAllMonsters} from '../indexedDB'; // Import the DB utility functions
+
 
 const customStyles = {
     control: (provided) => ({
@@ -112,25 +114,23 @@ const JsonUploader = () => {
     ];
 
     useEffect(() => {
-        const storedRunes = localStorage.getItem('runes');
-        if (storedRunes) {
-            const parsedRunes = JSON.parse(storedRunes);
-            setRunes(Object.values(parsedRunes));
-        }
-        const storedMonsters = localStorage.getItem('monsters');
-        if (storedMonsters) {
-            const parsedMonsters = JSON.parse(storedMonsters);
-            setMonsters(parsedMonsters);
-        }
+        const fetchData = async () => {
+            const storedRunes = await getAllItems('runes');
+            const storedMonsters = await getAllItems('monsters');
+            setRunes(storedRunes);
+            setMonsters(storedMonsters);
+        };
+        fetchData();
     }, []);
 
-    const clearData = () => {
+    const clearData = async () => {
         setRunes([]);
-        localStorage.removeItem('runes');
-        localStorage.removeItem('monsters');
+        setMonsters([]);
+        await clearStore('runes');
+        await clearStore('monsters');
     };
 
-    const handleFileUpload = (event) => {
+    const handleFileUpload = async (event) => {
         const file = event.target.files[0];
         const reader = new FileReader();
         const runeset = {};
@@ -140,7 +140,7 @@ const JsonUploader = () => {
             const data = JSON.parse(e.target.result);
             for (let datumKey in data['unit_list']) {
                 const monster = monstersData[data['unit_list'][datumKey]["unit_master_id"]];
-                monsterset[data['unit_list'][datumKey]["unit_id"]] = new Monster(
+                const monsterData = new Monster(
                     data['unit_list'][datumKey]["unit_id"],
                     data['unit_list'][datumKey]["unit_lvl"],
                     monster["name"],
@@ -148,31 +148,34 @@ const JsonUploader = () => {
                     monster["element"]
                 );
 
+                monsterset[data['unit_list'][datumKey]["unit_id"]] = monsterData;
+
                 for (let datum in data['unit_list'][datumKey]["runes"]) {
-                    runeset[data['unit_list'][datumKey]["runes"][datum]["rune_id"]] = new Rune(data['unit_list'][datumKey]["runes"][datum]);
+                    const runeData = new Rune(data['unit_list'][datumKey]["runes"][datum]);
+                    runeset[data['unit_list'][datumKey]["runes"][datum]["rune_id"]] = runeData;
+                    await setItem('runes', runeData); // Store rune in IndexedDB
                 }
             }
             for (let datumKey in data['runes']) {
-                runeset[data["runes"][datumKey]["rune_id"]] = new Rune(data["runes"][datumKey]);
+                const runeData = new Rune(data["runes"][datumKey]);
+                runeset[data["runes"][datumKey]["rune_id"]] = runeData;
+                await setItem('runes', runeData); // Store rune in IndexedDB
             }
-            localStorage.setItem('userData', JSON.stringify(data['unit_list']));
-            localStorage.setItem('runes', JSON.stringify(runeset));
-            localStorage.setItem('monsters', JSON.stringify(monsterset));
 
-            const storedRunes = localStorage.getItem('runes');
-            if (storedRunes) {
-                const parsedRunes = JSON.parse(storedRunes);
-                setRunes(Object.values(parsedRunes));
+            for (const monsterId in monsterset) {
+                await setItem('monsters', monsterset[monsterId]); // Store monster in IndexedDB
             }
-            const storedMonsters = localStorage.getItem('monsters');
-            if (storedMonsters) {
-                const parsedMonsters = JSON.parse(storedMonsters);
-                setMonsters(parsedMonsters);
-            }
+
+            // Fetch and update the state after uploading
+            const storedRunes = await getAllItems('runes');
+            const storedMonsters = await getAllMonsters();
+            setRunes(storedRunes);
+            setMonsters(storedMonsters);
         };
         reader.readAsText(file);
     };
 
+    // The rest of your code remains unchanged
     const handleFilterChange = (name, value) => {
         setFilters((prevFilters) => ({
             ...prevFilters,
@@ -485,6 +488,7 @@ const JsonUploader = () => {
 
                     <div className="runes">
                         {currentRunes.map((rune) => (
+                            console.log("aaaaaaaaaa",rune,monsters),
                             <RuneComponent key={rune.rune_id} rune={rune} monster={monsters[rune.occupied_id]}/>
                         ))}
                     </div>

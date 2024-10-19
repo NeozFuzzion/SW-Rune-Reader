@@ -24,6 +24,7 @@ const RuneComponent = ({rune, monster}) => {
                         </div>
                     </div>
                     <div className="rune-main">
+                        {rune.rune_id}
                         <span className="rune-main-stat">{runeStats[rune.main_id]['name']} {rune.main_stat}</span>
                         {rune.prefix_id !== 0 && <span className="rune-main-substat">{runeStats[rune.prefix_id]['name']} {rune.prefix_stat}</span>}
                     </div>
