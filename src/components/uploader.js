@@ -8,7 +8,7 @@ import RuneComponent from "./rune_component";
 import runeSets from "../runeSets";
 import runeStats from "../runeStats";
 import Pagination from "./pagination";
-import {setItem, getAllItems, clearStore, getAllMonsters} from '../indexedDB'; // Import the DB utility functions
+import {clearStore, getAllItems, getAllMonsters, setItem} from '../indexedDB'; // Import the DB utility functions
 
 
 const customStyles = {
@@ -116,7 +116,7 @@ const JsonUploader = () => {
     useEffect(() => {
         const fetchData = async () => {
             const storedRunes = await getAllItems('runes');
-            const storedMonsters = await getAllItems('monsters');
+            const storedMonsters = await getAllMonsters('monsters');
             setRunes(storedRunes);
             setMonsters(storedMonsters);
         };
@@ -140,15 +140,13 @@ const JsonUploader = () => {
             const data = JSON.parse(e.target.result);
             for (let datumKey in data['unit_list']) {
                 const monster = monstersData[data['unit_list'][datumKey]["unit_master_id"]];
-                const monsterData = new Monster(
+                monsterset[data['unit_list'][datumKey]["unit_id"]] = new Monster(
                     data['unit_list'][datumKey]["unit_id"],
                     data['unit_list'][datumKey]["unit_lvl"],
                     monster["name"],
                     monster["image_filename"],
                     monster["element"]
                 );
-
-                monsterset[data['unit_list'][datumKey]["unit_id"]] = monsterData;
 
                 for (let datum in data['unit_list'][datumKey]["runes"]) {
                     const runeData = new Rune(data['unit_list'][datumKey]["runes"][datum]);
@@ -168,7 +166,7 @@ const JsonUploader = () => {
 
             // Fetch and update the state after uploading
             const storedRunes = await getAllItems('runes');
-            const storedMonsters = await getAllMonsters();
+            const storedMonsters = await getAllMonsters('monsters');
             setRunes(storedRunes);
             setMonsters(storedMonsters);
         };
@@ -488,7 +486,6 @@ const JsonUploader = () => {
 
                     <div className="runes">
                         {currentRunes.map((rune) => (
-                            console.log("aaaaaaaaaa",rune,monsters),
                             <RuneComponent key={rune.rune_id} rune={rune} monster={monsters[rune.occupied_id]}/>
                         ))}
                     </div>
