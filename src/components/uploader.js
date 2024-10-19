@@ -69,7 +69,14 @@ const JsonUploader = () => {
         substat: [],
         level: [0, 15],
         rank: '',
+        ancient: '1',
     });
+
+    const ancientOptions = [
+        { value: '0', label: 'Without Ancient Runes' },
+        { value: '1', label: 'All Runes' },
+        { value: '2', label: 'Only Ancient Runes' },
+    ];
 
     const [sortOrder, setSortOrder] = useState({
         attribute: 'efficiency',
@@ -199,10 +206,13 @@ const JsonUploader = () => {
             );
         });
         const matchesLevel = rune.upgrade_curr >= filters.level[0] && rune.upgrade_curr <= filters.level[1];
-
+        const matchesAncientFilter = filters.ancient === '1'  // Show all runes
+            || (filters.ancient === '0' && rune.ancient === 0)  // Without ancient runes
+            || (filters.ancient === '2' && rune.ancient === 1); // Only ancient runes
         return (
             (!filters.setName.length || filters.setName.some((set) => rune.set_id === set.value)) &&
             matchesSlot &&
+            matchesAncientFilter &&
             matchesRuneMain &&
             matchesSubstat &&
             matchesLevel &&
@@ -215,6 +225,7 @@ const JsonUploader = () => {
             rune.efficiency_max_leg >= efficiencyRange.max_leg[0] && rune.efficiency_max_leg <= efficiencyRange.max_leg[1]
         );
     });
+
 
     const sortedRunes = filteredRunes.sort((a, b) => {
         const valueA = a[sortOrder.attribute];
@@ -324,6 +335,18 @@ const JsonUploader = () => {
                                         ariaLabel={['Lower thumb', 'Upper thumb']}
                                         ariaValuetext={(state) => `Thumb value ${state.valueNow}`}
                                     /></div>
+                            </div>
+                            <div className="filter_ancient">
+                                <div className="filter_name">Ancient Runes:</div>
+                                <Select
+                                    name="ancient"
+                                    options={ancientOptions}
+                                    value={ancientOptions.find(option => option.value === filters.ancient)}  // Set the selected value
+                                    styles={customStyles}  // Optional custom styles if you have them
+                                    onChange={(selectedOption) => handleFilterChange('ancient', selectedOption.value)}  // Handle the change
+                                    className="basic-single-select"
+                                    classNamePrefix="select"
+                                />
                             </div>
                         </div>
 

@@ -369,3 +369,12 @@ input[type="file"]:focus {
   box-shadow: 10px 0 5px -5px #272727;
 }
 
+.filter_ancient{
+  height: 100px;
+  display: flex;
+  width: 680px;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
