@@ -189,9 +189,12 @@ const JsonUploader = () => {
     };
 
     const handleSortOrderChange = (attribute) => {
+
         setSortOrder((prevSortOrder) => ({
             attribute,
-            direction: prevSortOrder.direction
+            direction: prevSortOrder.attribute === attribute
+                ? prevSortOrder.direction === 'asc' ? 'desc' : 'asc' // Toggle direction if the same attribute is clicked
+                : 'desc' // Default to 'asc' if a new attribute is clicked
         }));
     };
 
@@ -229,6 +232,7 @@ const JsonUploader = () => {
 
 
     const sortedRunes = filteredRunes.sort((a, b) => {
+
         const valueA = a[sortOrder.attribute];
         const valueB = b[sortOrder.attribute];
         if (valueA < valueB) return sortOrder.direction === 'asc' ? -1 : 1;
