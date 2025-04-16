@@ -3,7 +3,7 @@ name: Auto Deploy
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-deploy:
@@ -16,10 +16,13 @@ jobs:
       - name: 🔧 Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # or change to your required version
+          node-version: '18' # Change this if needed
 
       - name: 📦 Install Dependencies
         run: npm install
+
+      - name: 🔄 Update Browserslist DB
+        run: npx update-browserslist-db@latest
 
       - name: 🚀 Run Deploy Script
         run: npm run deploy
