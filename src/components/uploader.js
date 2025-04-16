@@ -140,6 +140,7 @@ const JsonUploader = () => {
             const data = JSON.parse(e.target.result);
             for (let datumKey in data['unit_list']) {
                 const monster = monstersData[data['unit_list'][datumKey]["unit_master_id"]];
+                console.log(monster);
                 monsterset[data['unit_list'][datumKey]["unit_id"]] = new Monster(
                     data['unit_list'][datumKey]["unit_id"],
                     data['unit_list'][datumKey]["unit_lvl"],
