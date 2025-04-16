@@ -23,6 +23,10 @@ jobs:
 
       - name: 🔄 Update Browserslist DB
         run: npx update-browserslist-db@latest
+      - name: 👤 Set Git Author (required for gh-pages)
+        run: |
+          git config --global user.email "michel@bot.github.com"
+          git config --global user.name "boby_le_bot"
 
       - name: 🚀 Run Deploy Script
         run: npm run deploy
