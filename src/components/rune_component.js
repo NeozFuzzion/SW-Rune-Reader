@@ -6,9 +6,9 @@ const RuneComponent = ({rune, monster}) => {
 
     return (
         <div style={{padding: '10px', margin: '10px', width: '350px'}}
-             className={"border_rune " + `border_rune${rune.rank}`}>
+             className={`border_rune border_rune${rune.rank}`}>
             <div style={{marginBottom: '10px'}}>
-                <span className="rune-title">+{rune.upgrade_curr} {rune.set_name} ({rune.slot_no})  {rune.ancient ===1 && <img src="runes/ancient.png"/>}</span>
+                <span className="rune-title">+{rune.upgrade_curr} {rune.set_name} ({rune.slot_no})  {rune.ancient ===1 && <img src="runes/ancient.png" alt='ancient'/>}</span>
             </div>
             <div className="rune-header">
                 <div className="rune-img-main">
