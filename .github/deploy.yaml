@@ -1,0 +1,43 @@
+name: Auto Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: 🔧 Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: 📦 Install Dependencies
+        run: npm install
+
+      - name: 🔄 Update Browserslist DB
+        run: npx update-browserslist-db@latest
+
+      - name: 🏗️ Build the Project
+        run: npm run build
+
+      - name: 👤 Set Git Author
+        run: |
+          git config --global user.email "lantaaxel@gmail.com"
+          git config --global user.name "neozfuzzion"
+      - name: 🔑 Authenticate GitHub
+        run: |
+          git remote set-url origin https://${{ secrets.DEPLOY_TOKEN }}@github.com/${{ github.repository }}
+          git fetch --unshallow
+
+      - name: 🚀 Run Deploy Script
+        run: npm run deploy
+
+      - name: ✅ Confirm Deployment
+        run: echo "Deployment successful!"
