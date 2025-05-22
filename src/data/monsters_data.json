@@ -9560,7 +9560,7 @@
         "element": "Dark"
     },
     "30815": {
-        "name": "Hayato",
+        "name": "Exorcist Association Arbiter",
         "image_filename": "unit_icon_0162_1_5.png",
         "element": "Dark"
     },
@@ -9590,27 +9590,27 @@
         "element": "Dark"
     },
     "30911": {
-        "name": "Jürgen",
+        "name": "Exorcist Association Resolver",
         "image_filename": "unit_icon_0166_1_1.png",
         "element": "Water"
     },
     "30912": {
-        "name": "Hartmann",
+        "name": "Exorcist Association Resolver",
         "image_filename": "unit_icon_0166_1_2.png",
         "element": "Fire"
     },
     "30913": {
-        "name": "Vincent",
+        "name": "Exorcist Association Resolver",
         "image_filename": "unit_icon_0166_1_3.png",
         "element": "Wind"
     },
     "30914": {
-        "name": "Werner",
+        "name": "Exorcist Association Resolver",
         "image_filename": "unit_icon_0166_1_4.png",
         "element": "Light"
     },
     "30915": {
-        "name": "Sigmund",
+        "name": "Exorcist Association Resolver",
         "image_filename": "unit_icon_0166_1_5.png",
         "element": "Dark"
     },
@@ -9640,27 +9640,27 @@
         "element": "Dark"
     },
     "31011": {
-        "name": "Mark",
+        "name": "Exorcist Association Fighter",
         "image_filename": "unit_icon_0163_1_1.png",
         "element": "Water"
     },
     "31012": {
-        "name": "Rick",
+        "name": "Exorcist Association Fighter",
         "image_filename": "unit_icon_0163_1_2.png",
         "element": "Fire"
     },
     "31013": {
-        "name": "Sean",
+        "name": "Exorcist Association Fighter",
         "image_filename": "unit_icon_0163_1_3.png",
         "element": "Wind"
     },
     "31014": {
-        "name": "Guy",
+        "name": "Exorcist Association Fighter",
         "image_filename": "unit_icon_0163_1_4.png",
         "element": "Light"
     },
     "31015": {
-        "name": "Jack",
+        "name": "Exorcist Association Fighter",
         "image_filename": "unit_icon_0163_1_5.png",
         "element": "Dark"
     },
@@ -9690,27 +9690,27 @@
         "element": "Dark"
     },
     "31111": {
-        "name": "Hiroyuki",
+        "name": "Exorcist Association Conjurer",
         "image_filename": "unit_icon_0165_1_1.png",
         "element": "Water"
     },
     "31112": {
-        "name": "Tetsuya",
+        "name": "Exorcist Association Conjurer",
         "image_filename": "unit_icon_0165_1_2.png",
         "element": "Fire"
     },
     "31113": {
-        "name": "Kuroshu",
+        "name": "Exorcist Association Conjurer",
         "image_filename": "unit_icon_0165_1_3.png",
         "element": "Wind"
     },
     "31114": {
-        "name": "Ginjo",
+        "name": "Exorcist Association Conjurer",
         "image_filename": "unit_icon_0165_1_4.png",
         "element": "Light"
     },
     "31115": {
-        "name": "Doburoku",
+        "name": "Exorcist Association Conjurer",
         "image_filename": "unit_icon_0165_1_5.png",
         "element": "Dark"
     },
@@ -9740,27 +9740,27 @@
         "element": "Dark"
     },
     "31211": {
-        "name": "Mizuki",
+        "name": "Exorcist Association Hunter",
         "image_filename": "unit_icon_0164_1_1.png",
         "element": "Water"
     },
     "31212": {
-        "name": "Sayumi",
+        "name": "Exorcist Association Hunter",
         "image_filename": "unit_icon_0164_1_2.png",
         "element": "Fire"
     },
     "31213": {
-        "name": "Aya",
+        "name": "Exorcist Association Hunter",
         "image_filename": "unit_icon_0164_1_3.png",
         "element": "Wind"
     },
     "31214": {
-        "name": "Haruka",
+        "name": "Exorcist Association Hunter",
         "image_filename": "unit_icon_0164_1_4.png",
         "element": "Light"
     },
     "31215": {
-        "name": "Yuko",
+        "name": "Exorcist Association Hunter",
         "image_filename": "unit_icon_0164_1_5.png",
         "element": "Dark"
     },
@@ -10159,6 +10159,216 @@
         "image_filename": "unit_icon_0177_1_5.png",
         "element": "Dark"
     },
+    "32403": {
+        "name": "Black Tortoise Champion",
+        "image_filename": "unit_icon_0183_1_3.png",
+        "element": "Wind"
+    },
+    "32413": {
+        "name": "Black Tortoise Champion",
+        "image_filename": "unit_icon_0183_1_3.png",
+        "element": "Wind"
+    },
+    "32501": {
+        "name": "Azure Dragon Swordsman",
+        "image_filename": "unit_icon_0179_1_1.png",
+        "element": "Water"
+    },
+    "32502": {
+        "name": "Azure Dragon Swordsman",
+        "image_filename": "unit_icon_0179_1_2.png",
+        "element": "Fire"
+    },
+    "32503": {
+        "name": "Azure Dragon Swordsman",
+        "image_filename": "unit_icon_0179_1_3.png",
+        "element": "Wind"
+    },
+    "32504": {
+        "name": "Azure Dragon Swordsman",
+        "image_filename": "unit_icon_0179_1_4.png",
+        "element": "Light"
+    },
+    "32505": {
+        "name": "Azure Dragon Swordsman",
+        "image_filename": "unit_icon_0179_1_5.png",
+        "element": "Dark"
+    },
+    "32511": {
+        "name": "Azure Dragon Swordsman",
+        "image_filename": "unit_icon_0179_1_1.png",
+        "element": "Water"
+    },
+    "32512": {
+        "name": "Azure Dragon Swordsman",
+        "image_filename": "unit_icon_0179_1_2.png",
+        "element": "Fire"
+    },
+    "32513": {
+        "name": "Azure Dragon Swordsman",
+        "image_filename": "unit_icon_0179_1_3.png",
+        "element": "Wind"
+    },
+    "32514": {
+        "name": "Azure Dragon Swordsman",
+        "image_filename": "unit_icon_0179_1_4.png",
+        "element": "Light"
+    },
+    "32515": {
+        "name": "Azure Dragon Swordsman",
+        "image_filename": "unit_icon_0179_1_5.png",
+        "element": "Dark"
+    },
+    "32601": {
+        "name": "Vermilion Bird Dancer",
+        "image_filename": "unit_icon_0180_1_1.png",
+        "element": "Water"
+    },
+    "32602": {
+        "name": "Vermilion Bird Dancer",
+        "image_filename": "unit_icon_0180_1_2.png",
+        "element": "Fire"
+    },
+    "32603": {
+        "name": "Vermilion Bird Dancer",
+        "image_filename": "unit_icon_0180_1_3.png",
+        "element": "Wind"
+    },
+    "32604": {
+        "name": "Vermilion Bird Dancer",
+        "image_filename": "unit_icon_0180_1_4.png",
+        "element": "Light"
+    },
+    "32605": {
+        "name": "Vermilion Bird Dancer",
+        "image_filename": "unit_icon_0180_1_5.png",
+        "element": "Dark"
+    },
+    "32611": {
+        "name": "Vermilion Bird Dancer",
+        "image_filename": "unit_icon_0180_1_1.png",
+        "element": "Water"
+    },
+    "32612": {
+        "name": "Vermilion Bird Dancer",
+        "image_filename": "unit_icon_0180_1_2.png",
+        "element": "Fire"
+    },
+    "32613": {
+        "name": "Vermilion Bird Dancer",
+        "image_filename": "unit_icon_0180_1_3.png",
+        "element": "Wind"
+    },
+    "32614": {
+        "name": "Vermilion Bird Dancer",
+        "image_filename": "unit_icon_0180_1_4.png",
+        "element": "Light"
+    },
+    "32615": {
+        "name": "Vermilion Bird Dancer",
+        "image_filename": "unit_icon_0180_1_5.png",
+        "element": "Dark"
+    },
+    "32801": {
+        "name": "White Tiger Blade Master",
+        "image_filename": "unit_icon_0182_1_1.png",
+        "element": "Water"
+    },
+    "32802": {
+        "name": "White Tiger Blade Master",
+        "image_filename": "unit_icon_0182_1_2.png",
+        "element": "Fire"
+    },
+    "32803": {
+        "name": "White Tiger Blade Master",
+        "image_filename": "unit_icon_0182_1_3.png",
+        "element": "Wind"
+    },
+    "32804": {
+        "name": "White Tiger Blade Master",
+        "image_filename": "unit_icon_0182_1_4.png",
+        "element": "Light"
+    },
+    "32805": {
+        "name": "White Tiger Blade Master",
+        "image_filename": "unit_icon_0182_1_5.png",
+        "element": "Dark"
+    },
+    "32811": {
+        "name": "White Tiger Blade Master",
+        "image_filename": "unit_icon_0182_1_1.png",
+        "element": "Water"
+    },
+    "32812": {
+        "name": "White Tiger Blade Master",
+        "image_filename": "unit_icon_0182_1_2.png",
+        "element": "Fire"
+    },
+    "32813": {
+        "name": "White Tiger Blade Master",
+        "image_filename": "unit_icon_0182_1_3.png",
+        "element": "Wind"
+    },
+    "32814": {
+        "name": "White Tiger Blade Master",
+        "image_filename": "unit_icon_0182_1_4.png",
+        "element": "Light"
+    },
+    "32815": {
+        "name": "White Tiger Blade Master",
+        "image_filename": "unit_icon_0182_1_5.png",
+        "element": "Dark"
+    },
+    "32901": {
+        "name": "Qilin Slasher",
+        "image_filename": "unit_icon_0181_1_1.png",
+        "element": "Water"
+    },
+    "32902": {
+        "name": "Qilin Slasher",
+        "image_filename": "unit_icon_0181_1_2.png",
+        "element": "Fire"
+    },
+    "32903": {
+        "name": "Qilin Slasher",
+        "image_filename": "unit_icon_0181_1_3.png",
+        "element": "Wind"
+    },
+    "32904": {
+        "name": "Qilin Slasher",
+        "image_filename": "unit_icon_0181_1_4.png",
+        "element": "Light"
+    },
+    "32905": {
+        "name": "Qilin Slasher",
+        "image_filename": "unit_icon_0181_1_5.png",
+        "element": "Dark"
+    },
+    "32911": {
+        "name": "Qilin Slasher",
+        "image_filename": "unit_icon_0181_1_1.png",
+        "element": "Water"
+    },
+    "32912": {
+        "name": "Qilin Slasher",
+        "image_filename": "unit_icon_0181_1_2.png",
+        "element": "Fire"
+    },
+    "32913": {
+        "name": "Qilin Slasher",
+        "image_filename": "unit_icon_0181_1_3.png",
+        "element": "Wind"
+    },
+    "32914": {
+        "name": "Qilin Slasher",
+        "image_filename": "unit_icon_0181_1_4.png",
+        "element": "Light"
+    },
+    "32915": {
+        "name": "Qilin Slasher",
+        "image_filename": "unit_icon_0181_1_5.png",
+        "element": "Dark"
+    },
     "40101": {
         "name": "Inugami",
         "image_filename": "unit_icon_0003_0_3.png",
@@ -10296,18 +10506,63 @@
     },
     "44007": {
         "name": "Chaos Beast Khi'zar Kha'jul",
-        "image_filename": "unit_icon_0010_4_3.png",
+        "image_filename": "unit_icon_0178_0_6.png",
         "element": "Pure"
     },
     "44008": {
         "name": "Chaos Beast Khi'zar Kha'jul",
-        "image_filename": "unit_icon_0010_4_3.png",
+        "image_filename": "unit_icon_0178_0_6.png",
         "element": "Pure"
     },
     "44009": {
         "name": "Chaos Beast Khi'zar Kha'jul",
-        "image_filename": "unit_icon_0010_4_3.png",
+        "image_filename": "unit_icon_0178_0_6.png",
         "element": "Pure"
+    },
+    "44107": {
+        "name": "Frostjade Beast Khi'zar Kha'jul",
+        "image_filename": "unit_icon_0178_0_1.png",
+        "element": "Water"
+    },
+    "44108": {
+        "name": "Frostjade Beast Khi'zar Kha'jul",
+        "image_filename": "unit_icon_0178_0_1.png",
+        "element": "Water"
+    },
+    "44109": {
+        "name": "Frostjade Beast Khi'zar Kha'jul",
+        "image_filename": "unit_icon_0178_0_1.png",
+        "element": "Water"
+    },
+    "44207": {
+        "name": "Blazing Beast Khi'zar Kha'jul",
+        "image_filename": "unit_icon_0178_0_2.png",
+        "element": "Fire"
+    },
+    "44208": {
+        "name": "Blazing Beast Khi'zar Kha'jul",
+        "image_filename": "unit_icon_0178_0_2.png",
+        "element": "Fire"
+    },
+    "44209": {
+        "name": "Blazing Beast Khi'zar Kha'jul",
+        "image_filename": "unit_icon_0178_0_2.png",
+        "element": "Fire"
+    },
+    "44307": {
+        "name": "Tempest Beast Khi'zar Kha'jul",
+        "image_filename": "unit_icon_0178_0_3.png",
+        "element": "Wind"
+    },
+    "44308": {
+        "name": "Tempest Beast Khi'zar Kha'jul",
+        "image_filename": "unit_icon_0178_0_3.png",
+        "element": "Wind"
+    },
+    "44309": {
+        "name": "Tempest Beast Khi'zar Kha'jul",
+        "image_filename": "unit_icon_0178_0_3.png",
+        "element": "Wind"
     },
     "45001": {
         "name": "형상아이템용 더미(물)",
