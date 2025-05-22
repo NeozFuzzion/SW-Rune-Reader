@@ -6,16 +6,16 @@ const RuneComponent = ({rune, monster}) => {
 
     return (
         <div style={{padding: '10px', margin: '10px', width: '350px'}}
-             className={"border_rune " + `border_rune${rune.rank}`}>
+             className={`border_rune border_rune${rune.rank}`}>
             <div style={{marginBottom: '10px'}}>
-                <span className="rune-title">+{rune.upgrade_curr} {rune.set_name} ({rune.slot_no})  {rune.ancient ===1 && <img src="runes/ancient.png"/>}</span>
+                <span className="rune-title">+{rune.upgrade_curr} {rune.set_name} ({rune.slot_no})  {rune.ancient ===1 && <img src="runes/ancient.png" alt='ancient'/>}</span>
             </div>
             <div className="rune-header">
                 <div className="rune-img-main">
                     <div className="div-rune-img">
-                        <img className="rune-set" src={`runes/${runeSets[rune.set_id].image}`}/>
-                        <img className="rune-class" src={`runes/${rune.extra % 10}.png`}/>
-                        <img className={`rune-slot${rune.slot_no}`} src={`runes/rune${rune.slot_no}.png`}/>
+                        <img className="rune-set" src={`runes/${runeSets[rune.set_id].image}`} alt={`set/runes/${runeSets[rune.set_id].image}`}/>
+                        <img className="rune-class" src={`runes/${rune.extra % 10}.png`} alt={`class/runes/${rune.extra % 10}.png`}/>
+                        <img className={`rune-slot${rune.slot_no}`} src={`runes/rune${rune.slot_no}.png`} alt={`slot/runes/rune${rune.slot_no}.png`}/>
                         <div className="stars">
                             {[...Array(rune.runeclass % 10)].map((_, index) => (
                                 <img key={index} className="star" src={"runes/star-awakened.png"}
@@ -50,7 +50,7 @@ const RuneComponent = ({rune, monster}) => {
                                         }}> {runeStats[subId]['name']} +{subStat} </span>}
 
                                         {subGrind > 0 && <span style={{color: "orange"}}>+{subGrind}</span>}
-                                        <img style={{scale: "80%"}} src="runes/enchanted.png"/>
+                                        <img style={{scale: "80%"}} src="runes/enchanted.png" alt='runes/enchanted.png'/>
                                     </div>
 
                                 ) : (
