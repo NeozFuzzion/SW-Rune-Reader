@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - test_indexeddb
 
 jobs:
   build-and-deploy:
