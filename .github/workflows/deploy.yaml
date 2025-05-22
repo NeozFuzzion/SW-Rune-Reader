@@ -27,6 +27,10 @@ jobs:
       - name: 🏗️ Build the Project
         run: npm run build
 
+      - name: 👤 Set Git Author
+        run: |
+          git config --global user.email "lantaaxel@gmail.com"
+          git config --global user.name "neozfuzzion"
       - name: 🔑 Authenticate GitHub
         run: |
           git remote set-url origin https://${{ secrets.DEPLOY_TOKEN }}@github.com/${{ github.repository }}
