@@ -2124,6 +2124,11 @@
         "image_filename": "unit_icon_0017_0_3.png",
         "element": "Water"
     },
+    "14512": {
+        "name": "Perna",
+        "image_filename": "unit_icon_0017_1_3.png",
+        "element": "Fire"
+    },
     "14513": {
         "name": "Teshar",
         "image_filename": "unit_icon_0017_2_3.png",
@@ -10898,6 +10903,16 @@
         "name": "Justice",
         "image_filename": "unit_icon_0202_0_1.png",
         "element": "Water"
+    },
+    "34202": {
+        "name": "Justice",
+        "image_filename": "unit_icon_0202_0_2.png",
+        "element": "Fire"
+    },
+    "34203": {
+        "name": "Justice",
+        "image_filename": "unit_icon_0202_0_3.png",
+        "element": "Wind"
     },
     "34204": {
         "name": "Justice",
