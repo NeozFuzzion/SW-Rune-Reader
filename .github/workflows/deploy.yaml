@@ -1,7 +1,7 @@
 name: Auto Deploy
 
 permissions:
-  contents: write   # 👈 REQUIRED to allow git push
+  contents: write
 
 on:
   push:

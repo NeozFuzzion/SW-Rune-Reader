@@ -2124,11 +2124,6 @@
         "image_filename": "unit_icon_0017_0_3.png",
         "element": "Water"
     },
-    "14512": {
-        "name": "Perna",
-        "image_filename": "unit_icon_0017_1_3.png",
-        "element": "Fire"
-    },
     "14513": {
         "name": "Teshar",
         "image_filename": "unit_icon_0017_2_3.png",
