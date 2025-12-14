@@ -10904,16 +10904,6 @@
         "image_filename": "unit_icon_0202_0_1.png",
         "element": "Water"
     },
-    "34202": {
-        "name": "Justice",
-        "image_filename": "unit_icon_0202_0_2.png",
-        "element": "Fire"
-    },
-    "34203": {
-        "name": "Justice",
-        "image_filename": "unit_icon_0202_0_3.png",
-        "element": "Wind"
-    },
     "34204": {
         "name": "Justice",
         "image_filename": "unit_icon_0202_0_4.png",

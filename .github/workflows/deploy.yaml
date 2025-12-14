@@ -6,7 +6,7 @@ on:
       - master
       - test_indexeddb
     paths-ignore:
-      - 'src/data/monster_data.json'
+      - 'src/data/monsters_data.json'
 
 jobs:
   build-and-deploy:
@@ -41,9 +41,9 @@ jobs:
         run: |
           git remote set-url origin https://${{ secrets.DEPLOY_TOKEN }}@github.com/${{ github.repository }}
 
-      - name: 💾 Commit updated monster_data.json
+      - name: 💾 Commit updated monsters_data.json
         run: |
-          git add src/data/monster_data.json
+          git add src/data/monsters_data.json
           git diff --cached --quiet || git commit -m "chore: update monster data [skip ci]"
           git push origin HEAD:${{ github.ref_name }}
 
