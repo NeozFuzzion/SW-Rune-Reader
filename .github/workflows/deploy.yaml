@@ -12,6 +12,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v3
@@ -34,12 +37,8 @@ jobs:
 
       - name: 👤 Set Git Author
         run: |
-          git config --global user.email "lantaaxel@gmail.com"
-          git config --global user.name "neozfuzzion"
-
-      - name: 🔑 Authenticate GitHub
-        run: |
-          git remote set-url origin https://${{ secrets.DEPLOY_TOKEN }}@github.com/${{ github.repository }}
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
 
       - name: 💾 Commit updated monsters_data.json
         run: |
