@@ -5,6 +5,8 @@ on:
     branches:
       - master
       - test_indexeddb
+    paths-ignore:
+      - 'src/data/monster_data.json'
 
 jobs:
   build-and-deploy:
@@ -13,6 +15,8 @@ jobs:
     steps:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: 🔧 Set up Node.js
         uses: actions/setup-node@v3
@@ -25,17 +29,26 @@ jobs:
       - name: 🔄 Update Browserslist DB
         run: npx update-browserslist-db@latest
 
-      - name: 🏗️ Build the Project
-        run: npm run build
+      - name: 🔁 Update Monster Data
+        run: npm run update-data
 
       - name: 👤 Set Git Author
         run: |
           git config --global user.email "lantaaxel@gmail.com"
           git config --global user.name "neozfuzzion"
+
       - name: 🔑 Authenticate GitHub
         run: |
           git remote set-url origin https://${{ secrets.DEPLOY_TOKEN }}@github.com/${{ github.repository }}
-          git fetch --unshallow
+
+      - name: 💾 Commit updated monster_data.json
+        run: |
+          git add src/data/monster_data.json
+          git diff --cached --quiet || git commit -m "chore: update monster data [skip ci]"
+          git push origin HEAD:${{ github.ref_name }}
+
+      - name: 🏗️ Build the Project
+        run: npm run build
 
       - name: 🚀 Run Deploy Script
         run: npm run deploy
