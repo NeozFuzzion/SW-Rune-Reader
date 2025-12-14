@@ -10584,8 +10584,6 @@
         "image_filename": "unit_icon_0184_1_5.png",
         "element": "Dark"
     },
-<<<<<<< Updated upstream
-=======
     "33502": {
         "name": "Daimon",
         "image_filename": "unit_icon_0201_1_2.png",
@@ -10796,7 +10794,6 @@
         "image_filename": "unit_icon_0197_1_5.png",
         "element": "Dark"
     },
->>>>>>> Stashed changes
     "34001": {
         "name": "Arcane Weapon",
         "image_filename": "unit_icon_0192_0_1.png",
@@ -10902,8 +10899,6 @@
         "image_filename": "unit_icon_0195_3_3.png",
         "element": "Wind"
     },
-<<<<<<< Updated upstream
-=======
     "34201": {
         "name": "Justice",
         "image_filename": "unit_icon_0202_0_1.png",
@@ -10954,7 +10949,6 @@
         "image_filename": "unit_icon_0202_1_5.png",
         "element": "Dark"
     },
->>>>>>> Stashed changes
     "40101": {
         "name": "Inugami",
         "image_filename": "unit_icon_0003_0_3.png",
