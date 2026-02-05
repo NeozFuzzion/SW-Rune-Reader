@@ -9560,7 +9560,7 @@
         "element": "Dark"
     },
     "30805": {
-        "name": "Exorcist Association Arbiter",
+        "name": "Hayato",
         "image_filename": "unit_icon_0162_1_5.png",
         "element": "Dark"
     },
@@ -9570,27 +9570,27 @@
         "element": "Dark"
     },
     "30901": {
-        "name": "Exorcist Association Resolver",
+        "name": "Werner",
         "image_filename": "unit_icon_0166_1_1.png",
         "element": "Water"
     },
     "30902": {
-        "name": "Exorcist Association Resolver",
+        "name": "Werner",
         "image_filename": "unit_icon_0166_1_2.png",
         "element": "Fire"
     },
     "30903": {
-        "name": "Exorcist Association Resolver",
+        "name": "Werner",
         "image_filename": "unit_icon_0166_1_3.png",
         "element": "Wind"
     },
     "30904": {
-        "name": "Exorcist Association Resolver",
+        "name": "Werner",
         "image_filename": "unit_icon_0166_1_4.png",
         "element": "Light"
     },
     "30905": {
-        "name": "Exorcist Association Resolver",
+        "name": "Werner",
         "image_filename": "unit_icon_0166_1_5.png",
         "element": "Dark"
     },
@@ -9620,27 +9620,27 @@
         "element": "Dark"
     },
     "31001": {
-        "name": "Exorcist Association Fighter",
+        "name": "Rick",
         "image_filename": "unit_icon_0163_1_1.png",
         "element": "Water"
     },
     "31002": {
-        "name": "Exorcist Association Fighter",
+        "name": "Rick",
         "image_filename": "unit_icon_0163_1_2.png",
         "element": "Fire"
     },
     "31003": {
-        "name": "Exorcist Association Fighter",
+        "name": "Rick",
         "image_filename": "unit_icon_0163_1_3.png",
         "element": "Wind"
     },
     "31004": {
-        "name": "Exorcist Association Fighter",
+        "name": "Rick",
         "image_filename": "unit_icon_0163_1_4.png",
         "element": "Light"
     },
     "31005": {
-        "name": "Exorcist Association Fighter",
+        "name": "Rick",
         "image_filename": "unit_icon_0163_1_5.png",
         "element": "Dark"
     },
@@ -9670,27 +9670,27 @@
         "element": "Dark"
     },
     "31101": {
-        "name": "Exorcist Association Conjurer",
+        "name": "Tetsuya",
         "image_filename": "unit_icon_0165_1_1.png",
         "element": "Water"
     },
     "31102": {
-        "name": "Exorcist Association Conjurer",
+        "name": "Tetsuya",
         "image_filename": "unit_icon_0165_1_2.png",
         "element": "Fire"
     },
     "31103": {
-        "name": "Exorcist Association Conjurer",
+        "name": "Tetsuya",
         "image_filename": "unit_icon_0165_1_3.png",
         "element": "Wind"
     },
     "31104": {
-        "name": "Exorcist Association Conjurer",
+        "name": "Tetsuya",
         "image_filename": "unit_icon_0165_1_4.png",
         "element": "Light"
     },
     "31105": {
-        "name": "Exorcist Association Conjurer",
+        "name": "Tetsuya",
         "image_filename": "unit_icon_0165_1_5.png",
         "element": "Dark"
     },
@@ -9720,27 +9720,27 @@
         "element": "Dark"
     },
     "31201": {
-        "name": "Exorcist Association Hunter",
+        "name": "Aya",
         "image_filename": "unit_icon_0164_1_1.png",
         "element": "Water"
     },
     "31202": {
-        "name": "Exorcist Association Hunter",
+        "name": "Aya",
         "image_filename": "unit_icon_0164_1_2.png",
         "element": "Fire"
     },
     "31203": {
-        "name": "Exorcist Association Hunter",
+        "name": "Aya",
         "image_filename": "unit_icon_0164_1_3.png",
         "element": "Wind"
     },
     "31204": {
-        "name": "Exorcist Association Hunter",
+        "name": "Aya",
         "image_filename": "unit_icon_0164_1_4.png",
         "element": "Light"
     },
     "31205": {
-        "name": "Exorcist Association Hunter",
+        "name": "Aya",
         "image_filename": "unit_icon_0164_1_5.png",
         "element": "Dark"
     },
@@ -10947,6 +10947,221 @@
     "34215": {
         "name": "Theonia",
         "image_filename": "unit_icon_0202_1_5.png",
+        "element": "Dark"
+    },
+    "34301": {
+        "name": "Frodo",
+        "image_filename": "unit_icon_0203_1_1.png",
+        "element": "Water"
+    },
+    "34311": {
+        "name": "Frodo",
+        "image_filename": "unit_icon_0203_1_1.png",
+        "element": "Water"
+    },
+    "34401": {
+        "name": "Gandalf",
+        "image_filename": "unit_icon_0204_1_1.png",
+        "element": "Water"
+    },
+    "34402": {
+        "name": "Gandalf",
+        "image_filename": "unit_icon_0204_1_2.png",
+        "element": "Fire"
+    },
+    "34403": {
+        "name": "Gandalf",
+        "image_filename": "unit_icon_0204_1_3.png",
+        "element": "Wind"
+    },
+    "34404": {
+        "name": "Gandalf",
+        "image_filename": "unit_icon_0204_1_4.png",
+        "element": "Light"
+    },
+    "34405": {
+        "name": "Gandalf",
+        "image_filename": "unit_icon_0204_1_5.png",
+        "element": "Dark"
+    },
+    "34411": {
+        "name": "Gandalf",
+        "image_filename": "unit_icon_0204_1_1.png",
+        "element": "Water"
+    },
+    "34412": {
+        "name": "Gandalf",
+        "image_filename": "unit_icon_0204_1_2.png",
+        "element": "Fire"
+    },
+    "34413": {
+        "name": "Gandalf",
+        "image_filename": "unit_icon_0204_1_3.png",
+        "element": "Wind"
+    },
+    "34414": {
+        "name": "Gandalf",
+        "image_filename": "unit_icon_0204_1_4.png",
+        "element": "Light"
+    },
+    "34415": {
+        "name": "Gandalf",
+        "image_filename": "unit_icon_0204_1_5.png",
+        "element": "Dark"
+    },
+    "34514": {
+        "name": "간달프(빛)(강화)",
+        "image_filename": "unit_icon_0204_1_4.png",
+        "element": "Light"
+    },
+    "34601": {
+        "name": "Aragorn",
+        "image_filename": "unit_icon_0206_1_1.png",
+        "element": "Water"
+    },
+    "34602": {
+        "name": "Aragorn",
+        "image_filename": "unit_icon_0206_1_2.png",
+        "element": "Fire"
+    },
+    "34603": {
+        "name": "Aragorn",
+        "image_filename": "unit_icon_0206_1_3.png",
+        "element": "Wind"
+    },
+    "34604": {
+        "name": "Aragorn",
+        "image_filename": "unit_icon_0206_1_4.png",
+        "element": "Light"
+    },
+    "34605": {
+        "name": "Aragorn",
+        "image_filename": "unit_icon_0206_1_5.png",
+        "element": "Dark"
+    },
+    "34611": {
+        "name": "Aragorn",
+        "image_filename": "unit_icon_0206_1_1.png",
+        "element": "Water"
+    },
+    "34612": {
+        "name": "Aragorn",
+        "image_filename": "unit_icon_0206_1_2.png",
+        "element": "Fire"
+    },
+    "34613": {
+        "name": "Aragorn",
+        "image_filename": "unit_icon_0206_1_3.png",
+        "element": "Wind"
+    },
+    "34614": {
+        "name": "Aragorn",
+        "image_filename": "unit_icon_0206_1_4.png",
+        "element": "Light"
+    },
+    "34615": {
+        "name": "Aragorn",
+        "image_filename": "unit_icon_0206_1_5.png",
+        "element": "Dark"
+    },
+    "34701": {
+        "name": "Legolas",
+        "image_filename": "unit_icon_0205_1_1.png",
+        "element": "Water"
+    },
+    "34702": {
+        "name": "Legolas",
+        "image_filename": "unit_icon_0205_1_2.png",
+        "element": "Fire"
+    },
+    "34703": {
+        "name": "Legolas",
+        "image_filename": "unit_icon_0205_1_3.png",
+        "element": "Wind"
+    },
+    "34704": {
+        "name": "Legolas",
+        "image_filename": "unit_icon_0205_1_4.png",
+        "element": "Light"
+    },
+    "34705": {
+        "name": "Legolas",
+        "image_filename": "unit_icon_0205_1_5.png",
+        "element": "Dark"
+    },
+    "34711": {
+        "name": "Legolas",
+        "image_filename": "unit_icon_0205_1_1.png",
+        "element": "Water"
+    },
+    "34712": {
+        "name": "Legolas",
+        "image_filename": "unit_icon_0205_1_2.png",
+        "element": "Fire"
+    },
+    "34713": {
+        "name": "Legolas",
+        "image_filename": "unit_icon_0205_1_3.png",
+        "element": "Wind"
+    },
+    "34714": {
+        "name": "Legolas",
+        "image_filename": "unit_icon_0205_1_4.png",
+        "element": "Light"
+    },
+    "34715": {
+        "name": "Legolas",
+        "image_filename": "unit_icon_0205_1_5.png",
+        "element": "Dark"
+    },
+    "34801": {
+        "name": "Gollum",
+        "image_filename": "unit_icon_0207_1_1.png",
+        "element": "Water"
+    },
+    "34802": {
+        "name": "Gollum",
+        "image_filename": "unit_icon_0207_1_2.png",
+        "element": "Fire"
+    },
+    "34803": {
+        "name": "Gollum",
+        "image_filename": "unit_icon_0207_1_3.png",
+        "element": "Wind"
+    },
+    "34804": {
+        "name": "Gollum",
+        "image_filename": "unit_icon_0207_1_4.png",
+        "element": "Light"
+    },
+    "34805": {
+        "name": "Gollum",
+        "image_filename": "unit_icon_0207_1_5.png",
+        "element": "Dark"
+    },
+    "34811": {
+        "name": "Gollum",
+        "image_filename": "unit_icon_0207_1_1.png",
+        "element": "Water"
+    },
+    "34812": {
+        "name": "Gollum",
+        "image_filename": "unit_icon_0207_1_2.png",
+        "element": "Fire"
+    },
+    "34813": {
+        "name": "Gollum",
+        "image_filename": "unit_icon_0207_1_3.png",
+        "element": "Wind"
+    },
+    "34814": {
+        "name": "Gollum",
+        "image_filename": "unit_icon_0207_1_4.png",
+        "element": "Light"
+    },
+    "34815": {
+        "name": "Gollum",
+        "image_filename": "unit_icon_0207_1_5.png",
         "element": "Dark"
     },
     "40101": {
@@ -14124,6 +14339,36 @@
         "image_filename": "unit_icon_0196_2_1.png",
         "element": "Water"
     },
+    "502102": {
+        "name": "Twisted Wraithlord",
+        "image_filename": "unit_icon_0196_2_2.png",
+        "element": "Fire"
+    },
+    "502202": {
+        "name": "Twisted Wraithlord",
+        "image_filename": "unit_icon_0196_2_2.png",
+        "element": "Fire"
+    },
+    "502302": {
+        "name": "Twisted Wraithlord",
+        "image_filename": "unit_icon_0196_2_2.png",
+        "element": "Fire"
+    },
+    "503103": {
+        "name": "Twisted Wraithlord",
+        "image_filename": "unit_icon_0196_2_3.png",
+        "element": "Wind"
+    },
+    "503203": {
+        "name": "Twisted Wraithlord",
+        "image_filename": "unit_icon_0196_2_3.png",
+        "element": "Wind"
+    },
+    "503303": {
+        "name": "Twisted Wraithlord",
+        "image_filename": "unit_icon_0196_2_3.png",
+        "element": "Wind"
+    },
     "900001": {
         "name": "만우절이벤트 아이린",
         "image_filename": "unit_icon_0000_0_0.png",
@@ -14303,5 +14548,20 @@
         "name": "True Devil Kazuya",
         "image_filename": "unit_icon_0190_1_5.png",
         "element": "Dark"
+    },
+    "2003805": {
+        "name": "Mouth of Sauron",
+        "image_filename": "unit_icon_0208_1_5.png",
+        "element": "Dark"
+    },
+    "2003902": {
+        "name": "Uglúk",
+        "image_filename": "unit_icon_0209_1_2.png",
+        "element": "Fire"
+    },
+    "2004003": {
+        "name": "The Witch-king of Angmar",
+        "image_filename": "unit_icon_0210_1_3.png",
+        "element": "Wind"
     }
 }
