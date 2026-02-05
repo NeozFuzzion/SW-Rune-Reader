@@ -10,6 +10,8 @@ on:
       - test_indexeddb
     paths-ignore:
       - 'src/data/monsters_data.json'
+      
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
