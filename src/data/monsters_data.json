@@ -349,6 +349,31 @@
         "image_filename": "unit_icon_0002_4_1.png",
         "element": "Dark"
     },
+    "10631": {
+        "name": "Tarq",
+        "image_filename": "unit_icon_0211_3_1.png",
+        "element": "Water"
+    },
+    "10632": {
+        "name": "Sieq",
+        "image_filename": "unit_icon_0211_3_2.png",
+        "element": "Fire"
+    },
+    "10633": {
+        "name": "Gamir",
+        "image_filename": "unit_icon_0211_3_3.png",
+        "element": "Wind"
+    },
+    "10634": {
+        "name": "Shamar",
+        "image_filename": "unit_icon_0211_3_4.png",
+        "element": "Light"
+    },
+    "10635": {
+        "name": "Shumar",
+        "image_filename": "unit_icon_0211_3_5.png",
+        "element": "Dark"
+    },
     "10701": {
         "name": "Warbear",
         "image_filename": "unit_icon_0002_0_2.png",
@@ -982,6 +1007,31 @@
     "11715": {
         "name": "Drogan",
         "image_filename": "unit_icon_0006_4_3.png",
+        "element": "Dark"
+    },
+    "11731": {
+        "name": "Purian",
+        "image_filename": "unit_icon_0212_3_1.png",
+        "element": "Water"
+    },
+    "11732": {
+        "name": "Tagaros",
+        "image_filename": "unit_icon_0212_3_2.png",
+        "element": "Fire"
+    },
+    "11733": {
+        "name": "Anduril",
+        "image_filename": "unit_icon_0212_3_3.png",
+        "element": "Wind"
+    },
+    "11734": {
+        "name": "Eludain",
+        "image_filename": "unit_icon_0212_3_4.png",
+        "element": "Light"
+    },
+    "11735": {
+        "name": "Drogan",
+        "image_filename": "unit_icon_0212_3_5.png",
         "element": "Dark"
     },
     "11801": {
@@ -13959,6 +14009,106 @@
         "image_filename": "unit_icon_0009_4_2.png",
         "element": "Dark"
     },
+    "121601": {
+        "name": "2차각성 인페르노 수정_왼쪽(물)",
+        "image_filename": "unit_icon_0006_0_2.png",
+        "element": "Water"
+    },
+    "121602": {
+        "name": "2차각성 인페르노 수정_왼쪽(불)",
+        "image_filename": "unit_icon_0006_1_2.png",
+        "element": "Fire"
+    },
+    "121603": {
+        "name": "2차각성 인페르노 수정_왼쪽(바람)",
+        "image_filename": "unit_icon_0006_2_2.png",
+        "element": "Wind"
+    },
+    "121604": {
+        "name": "2차각성 인페르노 수정_왼쪽(빛)",
+        "image_filename": "unit_icon_0006_3_2.png",
+        "element": "Light"
+    },
+    "121605": {
+        "name": "2차각성 인페르노 수정_왼쪽(어둠)",
+        "image_filename": "unit_icon_0006_4_2.png",
+        "element": "Dark"
+    },
+    "121611": {
+        "name": "2차각성 인페르노 수정_오른쪽(물)",
+        "image_filename": "unit_icon_0006_0_3.png",
+        "element": "Water"
+    },
+    "121612": {
+        "name": "2차각성 인페르노 수정_오른쪽(불)",
+        "image_filename": "unit_icon_0006_1_3.png",
+        "element": "Fire"
+    },
+    "121613": {
+        "name": "2차각성 인페르노 수정_오른쪽(바람)",
+        "image_filename": "unit_icon_0006_2_3.png",
+        "element": "Wind"
+    },
+    "121614": {
+        "name": "2차각성 인페르노 수정_오른쪽(빛)",
+        "image_filename": "unit_icon_0006_3_3.png",
+        "element": "Light"
+    },
+    "121615": {
+        "name": "2차각성 인페르노 수정_오른쪽(어둠)",
+        "image_filename": "unit_icon_0006_4_3.png",
+        "element": "Dark"
+    },
+    "121701": {
+        "name": "2차각성 헬하운드 수정_왼쪽(물)",
+        "image_filename": "unit_icon_0002_0_0.png",
+        "element": "Water"
+    },
+    "121702": {
+        "name": "2차각성 헬하운드 수정_왼쪽(불)",
+        "image_filename": "unit_icon_0002_1_0.png",
+        "element": "Fire"
+    },
+    "121703": {
+        "name": "2차각성 헬하운드 수정_왼쪽(바람)",
+        "image_filename": "unit_icon_0002_2_0.png",
+        "element": "Wind"
+    },
+    "121704": {
+        "name": "2차각성 헬하운드 수정_왼쪽(빛)",
+        "image_filename": "unit_icon_0002_3_0.png",
+        "element": "Light"
+    },
+    "121705": {
+        "name": "2차각성 헬하운드 수정_왼쪽(어둠)",
+        "image_filename": "unit_icon_0002_4_0.png",
+        "element": "Dark"
+    },
+    "121711": {
+        "name": "2차각성 헬하운드 수정_오른쪽(물)",
+        "image_filename": "unit_icon_0002_0_1.png",
+        "element": "Water"
+    },
+    "121712": {
+        "name": "2차각성 헬하운드 수정_오른쪽(불)",
+        "image_filename": "unit_icon_0002_1_1.png",
+        "element": "Fire"
+    },
+    "121713": {
+        "name": "2차각성 헬하운드 수정_오른쪽(바람)",
+        "image_filename": "unit_icon_0002_2_1.png",
+        "element": "Wind"
+    },
+    "121714": {
+        "name": "2차각성 헬하운드 수정_오른쪽(빛)",
+        "image_filename": "unit_icon_0002_3_1.png",
+        "element": "Light"
+    },
+    "121715": {
+        "name": "2차각성 헬하운드 수정_오른쪽(어둠)",
+        "image_filename": "unit_icon_0002_4_1.png",
+        "element": "Dark"
+    },
     "200103": {
         "name": "Small Crystal",
         "image_filename": "unit_icon_0008_0_3.png",
@@ -14368,6 +14518,76 @@
         "name": "Twisted Wraithlord",
         "image_filename": "unit_icon_0196_2_3.png",
         "element": "Wind"
+    },
+    "504104": {
+        "name": "Twisted Wraithlord",
+        "image_filename": "unit_icon_0196_2_4.png",
+        "element": "Light"
+    },
+    "504204": {
+        "name": "Twisted Wraithlord",
+        "image_filename": "unit_icon_0196_2_4.png",
+        "element": "Light"
+    },
+    "504304": {
+        "name": "Twisted Wraithlord",
+        "image_filename": "unit_icon_0196_2_4.png",
+        "element": "Light"
+    },
+    "600001": {
+        "name": "Ancient Guardian",
+        "image_filename": "unit_icon_0213_1_2.png",
+        "element": "Fire"
+    },
+    "610101": {
+        "name": "Tarq",
+        "image_filename": "unit_icon_0211_3_1.png",
+        "element": "Water"
+    },
+    "610102": {
+        "name": "Sieq",
+        "image_filename": "unit_icon_0211_3_2.png",
+        "element": "Fire"
+    },
+    "610103": {
+        "name": "Gamir",
+        "image_filename": "unit_icon_0211_3_3.png",
+        "element": "Wind"
+    },
+    "610104": {
+        "name": "Shamar",
+        "image_filename": "unit_icon_0211_3_4.png",
+        "element": "Light"
+    },
+    "610105": {
+        "name": "Shumar",
+        "image_filename": "unit_icon_0211_3_5.png",
+        "element": "Dark"
+    },
+    "610201": {
+        "name": "Purian",
+        "image_filename": "unit_icon_0212_3_1.png",
+        "element": "Water"
+    },
+    "610202": {
+        "name": "Tagaros",
+        "image_filename": "unit_icon_0212_3_2.png",
+        "element": "Fire"
+    },
+    "610203": {
+        "name": "Anduril",
+        "image_filename": "unit_icon_0212_3_3.png",
+        "element": "Wind"
+    },
+    "610204": {
+        "name": "Eludain",
+        "image_filename": "unit_icon_0212_3_4.png",
+        "element": "Light"
+    },
+    "610205": {
+        "name": "Drogan",
+        "image_filename": "unit_icon_0212_3_5.png",
+        "element": "Dark"
     },
     "900001": {
         "name": "만우절이벤트 아이린",
