@@ -11214,6 +11214,56 @@
         "image_filename": "unit_icon_0207_1_5.png",
         "element": "Dark"
     },
+    "35501": {
+        "name": "Dr. Plasma",
+        "image_filename": "unit_icon_0214_0_1.png",
+        "element": "Water"
+    },
+    "35502": {
+        "name": "Dr. Plasma",
+        "image_filename": "unit_icon_0214_0_2.png",
+        "element": "Fire"
+    },
+    "35503": {
+        "name": "Dr. Plasma",
+        "image_filename": "unit_icon_0214_0_3.png",
+        "element": "Wind"
+    },
+    "35504": {
+        "name": "Dr. Plasma",
+        "image_filename": "unit_icon_0214_0_4.png",
+        "element": "Light"
+    },
+    "35505": {
+        "name": "Dr. Plasma",
+        "image_filename": "unit_icon_0214_0_5.png",
+        "element": "Dark"
+    },
+    "35511": {
+        "name": "Dr. Felix",
+        "image_filename": "unit_icon_0214_1_1.png",
+        "element": "Water"
+    },
+    "35512": {
+        "name": "Dr. Matteo",
+        "image_filename": "unit_icon_0214_1_2.png",
+        "element": "Fire"
+    },
+    "35513": {
+        "name": "Dr. Christoph",
+        "image_filename": "unit_icon_0214_1_3.png",
+        "element": "Wind"
+    },
+    "35514": {
+        "name": "Dr. Albert",
+        "image_filename": "unit_icon_0214_1_4.png",
+        "element": "Light"
+    },
+    "35515": {
+        "name": "Dr. Richard",
+        "image_filename": "unit_icon_0214_1_5.png",
+        "element": "Dark"
+    },
     "40101": {
         "name": "Inugami",
         "image_filename": "unit_icon_0003_0_3.png",
