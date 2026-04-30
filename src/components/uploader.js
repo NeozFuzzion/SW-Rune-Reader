@@ -139,18 +139,31 @@ const JsonUploader = () => {
         reader.onload = async (e) => {
             const data = JSON.parse(e.target.result);
             for (let datumKey in data['unit_list']) {
-                const monster = monstersData[data['unit_list'][datumKey]["unit_master_id"]];
-                monsterset[data['unit_list'][datumKey]["unit_id"]] = new Monster(
-                    data['unit_list'][datumKey]["unit_id"],
-                    data['unit_list'][datumKey]["unit_lvl"],
-                    monster["name"],
-                    monster["image_filename"],
-                    monster["element"]
-                );
+                const unitData = data['unit_list'][datumKey];
+                const monster = monstersData[unitData["unit_master_id"]];
 
-                for (let datum in data['unit_list'][datumKey]["runes"]) {
-                    const runeData = new Rune(data['unit_list'][datumKey]["runes"][datum]);
-                    runeset[data['unit_list'][datumKey]["runes"][datum]["rune_id"]] = runeData;
+                if (monster) {
+                    monsterset[unitData["unit_id"]] = new Monster(
+                        unitData["unit_id"],
+                        unitData["unit_lvl"],
+                        monster["name"],
+                        monster["image_filename"],
+                        monster["element"]
+                    );
+                } else {
+                    console.warn(`Monster inconnu (unit_master_id: ${unitData["unit_master_id"]}), utilisation de valeurs par défaut.`);
+                    monsterset[unitData["unit_id"]] = new Monster(
+                        unitData["unit_id"],
+                        unitData["unit_lvl"],
+                        `Unknown (${unitData["unit_master_id"]})`,
+                        "",
+                        "unknown"
+                    );
+                }
+
+                for (let datum in unitData["runes"]) {
+                    const runeData = new Rune(unitData["runes"][datum]);
+                    runeset[unitData["runes"][datum]["rune_id"]] = runeData;
                     await setItem('runes', runeData); // Store rune in IndexedDB
                 }
             }

@@ -3,7 +3,9 @@ class Monster {
         this.monster_id = monster_id;
         this.level = level;
         this.name = name;
-        this.image = "https://swarfarm.com/static/herders/images/monsters/"+image;
+        this.image = image
+            ? "https://swarfarm.com/static/herders/images/monsters/" + image
+            : "";
         this.element = element;
     }
 }

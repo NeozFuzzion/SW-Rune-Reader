@@ -29,8 +29,11 @@ const RuneComponent = ({rune, monster}) => {
                     </div>
                 </div>
                 <div>
-                    {monster && (
+                    {monster && monster.image && (
                         <img className="monster" src={`${monster.image}`} alt={monster.name}/>
+                    )}
+                    {monster && !monster.image && (
+                        <span className="monster-unknown">{monster.name}</span>
                     )}
                 </div>
             </div>
