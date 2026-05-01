@@ -1,14 +1,26 @@
-import React from 'react';
 import runeSets from "../runeSets";
 import runeStats from "../runeStats";
+import { useI18n } from '../i18n';
 
 const RuneComponent = ({rune, monster}) => {
+    const { lang, t } = useI18n();
+    const statName = (id) => {
+        const stat = runeStats[id];
+        if (!stat) return '?';
+        return lang === 'fr' && stat.name_fr ? stat.name_fr : stat.name;
+    };
+
+    const setName = (id) => {
+        const s = runeSets[id];
+        if (!s) return '?';
+        return lang === 'fr' && s.name_fr ? s.name_fr : s.name;
+    };
 
     return (
         <div style={{padding: '10px', margin: '10px', width: '350px'}}
              className={`border_rune border_rune${rune.rank}`}>
             <div style={{marginBottom: '10px'}}>
-                <span className="rune-title">+{rune.upgrade_curr} {rune.set_name} ({rune.slot_no})  {rune.ancient ===1 && <img src="runes/ancient.png" alt='ancient'/>}</span>
+                <span className="rune-title">+{rune.upgrade_curr} {setName(rune.set_id)} ({rune.slot_no})  {rune.ancient ===1 && <img src="runes/ancient.png" alt='ancient'/>}</span>
             </div>
             <div className="rune-header">
                 <div className="rune-img-main">
@@ -24,8 +36,8 @@ const RuneComponent = ({rune, monster}) => {
                         </div>
                     </div>
                     <div className="rune-main">
-                        <span className="rune-main-stat">{runeStats[rune.main_id]['name']} {rune.main_stat}</span>
-                        {rune.prefix_id !== 0 && <span className="rune-main-substat">{runeStats[rune.prefix_id]['name']} {rune.prefix_stat}</span>}
+                        <span className="rune-main-stat">{statName(rune.main_id)} {rune.main_stat}</span>
+                        {rune.prefix_id !== 0 && <span className="rune-main-substat">{statName(rune.prefix_id)} {rune.prefix_stat}</span>}
                     </div>
                 </div>
                 <div>
@@ -50,7 +62,7 @@ const RuneComponent = ({rune, monster}) => {
                                     <div className="gemmed">
                                         {runeStats[subId] && <span style={{
                                             width: 'max-content',
-                                        }}> {runeStats[subId]['name']} +{subStat} </span>}
+                                        }}> {statName(subId)} +{subStat} </span>}
 
                                         {subGrind > 0 && <span style={{color: "orange"}}>+{subGrind}</span>}
                                         <img style={{scale: "80%"}} src="runes/enchanted.png" alt='runes/enchanted.png'/>
@@ -58,7 +70,7 @@ const RuneComponent = ({rune, monster}) => {
 
                                 ) : (
                                     <div className="notgemmed">
-                                        {runeStats[subId] && <span>{runeStats[subId]['name']} +{subStat} </span>}
+                                        {runeStats[subId] && <span>{statName(subId)} +{subStat} </span>}
                                         {subGrind > 0 && <span style={{color: "orange"}}>+{subGrind}</span>}
                                     </div>
                                 )
@@ -70,21 +82,19 @@ const RuneComponent = ({rune, monster}) => {
                 <div className="rune_efficiency" style={{display: 'flex', flexDirection: 'column', alignItems: "flex-end"}}>
 
                     <div style={{display: 'flex', alignItems: 'center', justifyContent: "flex-end"}}>
-                        <span>Efficiency :</span>{rune.efficiency !== rune.efficiency_max ?
+                        <span>{t('efficiencyComp')}</span>{rune.efficiency !== rune.efficiency_max ?
                         (<p>{rune.efficiency.toFixed(2)}% : {rune.efficiency_max.toFixed(2)}%</p>
                         )
                         : (
                             <p>{rune.efficiency.toFixed(2)}%</p>
                         )}
-
-
                     </div>
                     <div style={{display: 'flex', alignItems: 'center', justifyContent: "flex-end"}}>
-                        <span>Hero :</span><p style={{color: "#b86cff"}}> {rune.efficiency_min_hero.toFixed(2)}%
+                        <span>{t('heroComp')}</span><p style={{color: "#b86cff"}}> {rune.efficiency_min_hero.toFixed(2)}%
                             : {rune.efficiency_max_hero.toFixed(2)}%</p>
                     </div>
                     <div style={{display: 'flex', alignItems: 'center', justifyContent: "flex-end"}}>
-                        <span>Leg :</span><p style={{color: "orange"}}> {rune.efficiency_min_leg.toFixed(2)}%
+                        <span>{t('legComp')}</span><p style={{color: "orange"}}> {rune.efficiency_min_leg.toFixed(2)}%
                         : {rune.efficiency_max_leg.toFixed(2)}%</p>
                     </div>
                 </div>

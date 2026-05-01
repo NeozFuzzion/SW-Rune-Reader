@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import ReactSlider from 'react-slider';
 import Select from 'react-select';
 import Rune from "../Rune";
@@ -8,7 +8,8 @@ import RuneComponent from "./rune_component";
 import runeSets from "../runeSets";
 import runeStats from "../runeStats";
 import Pagination from "./pagination";
-import {clearStore, getAllItems, getAllMonsters, setItem} from '../indexedDB'; // Import the DB utility functions
+import {clearStore, getAllItems, getAllMonsters, setItem} from '../indexedDB';
+import { useI18n } from '../i18n';
 
 
 const customStyles = {
@@ -60,6 +61,7 @@ const customStyles = {
 };
 
 const JsonUploader = () => {
+    const { t, lang } = useI18n();
     const [runes, setRunes] = useState([]);
     const [monsters, setMonsters] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -75,9 +77,9 @@ const JsonUploader = () => {
     });
 
     const ancientOptions = [
-        { value: '0', label: 'Without Ancient Runes' },
-        { value: '1', label: 'All Runes' },
-        { value: '2', label: 'Only Ancient Runes' },
+        { value: '0', label: t('ancientWithout') },
+        { value: '1', label: t('ancientAll') },
+        { value: '2', label: t('ancientOnly') },
     ];
 
     const [sortOrder, setSortOrder] = useState({
@@ -96,21 +98,21 @@ const JsonUploader = () => {
 
     const setNameOptions = Object.values(runeSets).map(runeSet => ({
         value: runeSet.id_set,
-        label: runeSet.name
+        label: lang === 'fr' && runeSet.name_fr ? runeSet.name_fr : runeSet.name
     }));
 
     const statOptions = Object.values(runeStats).map(runeStat => ({
         value: runeStat.id_stat,
-        label: runeStat.name
+        label: lang === 'fr' && runeStat.name_fr ? runeStat.name_fr : runeStat.name
     }));
 
     const slotOptions = [
-        {value: '1', label: 'Slot 1'},
-        {value: '2', label: 'Slot 2'},
-        {value: '3', label: 'Slot 3'},
-        {value: '4', label: 'Slot 4'},
-        {value: '5', label: 'Slot 5'},
-        {value: '6', label: 'Slot 6'},
+        {value: '1', label: `${t('slotPrefix')} 1`},
+        {value: '2', label: `${t('slotPrefix')} 2`},
+        {value: '3', label: `${t('slotPrefix')} 3`},
+        {value: '4', label: `${t('slotPrefix')} 4`},
+        {value: '5', label: `${t('slotPrefix')} 5`},
+        {value: '6', label: `${t('slotPrefix')} 6`},
     ];
 
     useEffect(() => {
@@ -271,16 +273,16 @@ const JsonUploader = () => {
         <div style={{padding: '20px'}}>
             {runes.length === 0 ? (
                 <div>
-                    <p>No runes to display. Please upload a JSON file.</p>
+                    <p>{t('noRunes')}</p>
                     <input type="file" accept=".json" onChange={handleFileUpload}/>
                 </div>
             ) : (
                 <div style={{marginTop: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <button onClick={clearData}>Clear Data</button>
+                    <button onClick={clearData}>{t('clearData')}</button>
                     <div className="filters" style={{marginBottom: '10px'}}>
                         <div className="select_filter">
                             <div className="filter">
-                                <div className="filter_name">Set :</div>
+                                <div className="filter_name">{t('filterSet')}</div>
                                 <Select
                                     isMulti
                                     name="setName"
@@ -295,7 +297,7 @@ const JsonUploader = () => {
                                 />
                             </div>
                             <div className="filter">
-                                <div className="filter_name">Slot :</div>
+                                <div className="filter_name">{t('filterSlot')}</div>
                                 <Select
                                     isMulti
                                     name="slotNo"
@@ -310,7 +312,7 @@ const JsonUploader = () => {
                                 />
                             </div>
                             <div className="filter">
-                                <div className="filter_name">Main :</div>
+                                <div className="filter_name">{t('filterMain')}</div>
                                 <Select
                                     isMulti
                                     name="runeMain"
@@ -325,7 +327,7 @@ const JsonUploader = () => {
                                 />
                             </div>
                             <div className="filter">
-                                <div className="filter_name">Substats :</div>
+                                <div className="filter_name">{t('filterSubstats')}</div>
                                 <Select
                                     isMulti
                                     name="substat"
@@ -340,7 +342,7 @@ const JsonUploader = () => {
                                 />
                             </div>
                             <div className="filter_efficiency">
-                                <div className="filter_efficiency_name">Level :</div>
+                                <div className="filter_efficiency_name">{t('filterLevel')}</div>
                                 <div>{filters.level[0]} : {filters.level[1]}
                                     <ReactSlider
                                         className="horizontal-slider"
@@ -355,7 +357,7 @@ const JsonUploader = () => {
                                     /></div>
                             </div>
                             <div className="filter_ancient">
-                                <div className="filter_name">Ancient Runes:</div>
+                                <div className="filter_name">{t('filterAncient')}</div>
                                 <Select
                                     name="ancient"
                                     options={ancientOptions}
@@ -374,7 +376,7 @@ const JsonUploader = () => {
 
                             <div className="filter_efficiency_couple">
                                 <div className="filter filter_efficiency">
-                                    <div className="filter_efficiency_name">Efficiency :</div>
+                                    <div className="filter_efficiency_name">{t('efficiencyLabel')}</div>
 
                                     <div>{efficiencyRange.efficiency[0]} : {efficiencyRange.efficiency[1]}<ReactSlider
                                         className="horizontal-slider"
@@ -389,7 +391,7 @@ const JsonUploader = () => {
                                     /></div>
                                 </div>
                                 <div className="filter filter_efficiency">
-                                    <div className="filter_efficiency_name">Effi. Max :</div>
+                                    <div className="filter_efficiency_name">{t('effiMax')}</div>
 
                                     <div>{efficiencyRange.max_efficiency[0]} : {efficiencyRange.max_efficiency[1]}<ReactSlider
                                         className="horizontal-slider"
@@ -406,7 +408,7 @@ const JsonUploader = () => {
                             </div>
                             <div className="filter_efficiency_couple">
                                 <div className="filter filter_efficiency">
-                                    <div className="filter_efficiency_name">Effi. Min Hero:</div>
+                                    <div className="filter_efficiency_name">{t('effiMinHeroLabel')}</div>
 
                                     <div>{efficiencyRange.min_hero[0]} : {efficiencyRange.min_hero[1]}<ReactSlider
                                         className="horizontal-slider"
@@ -421,7 +423,7 @@ const JsonUploader = () => {
                                     /></div>
                                 </div>
                                 <div className="filter filter_efficiency">
-                                    <div className="filter_efficiency_name">Effi. Max Hero:</div>
+                                    <div className="filter_efficiency_name">{t('effiMaxHeroLabel')}</div>
 
                                     <div>{efficiencyRange.max_hero[0]} : {efficiencyRange.max_hero[1]}<ReactSlider
                                         className="horizontal-slider"
@@ -438,7 +440,7 @@ const JsonUploader = () => {
                             </div>
                             <div className="filter_efficiency_couple">
                                 <div className="filter filter_efficiency">
-                                    <div className="filter_efficiency_name">Effi. Min Leg:</div>
+                                    <div className="filter_efficiency_name">{t('effiMinLegLabel')}</div>
 
                                     <div>{efficiencyRange.min_leg[0]} : {efficiencyRange.min_leg[1]}<ReactSlider
                                         className="horizontal-slider"
@@ -453,7 +455,7 @@ const JsonUploader = () => {
                                     /></div>
                                 </div>
                                 <div className="filter filter_efficiency">
-                                    <div className="filter_efficiency_name">Effi. Max Leg:</div>
+                                    <div className="filter_efficiency_name">{t('effiMaxLegLabel')}</div>
                                     <div>{efficiencyRange.max_leg[0]} : {efficiencyRange.max_leg[1]}
                                         <ReactSlider
                                             className="horizontal-slider"
@@ -473,26 +475,26 @@ const JsonUploader = () => {
 
                     {/* Sorting controls */}
                     <div style={{marginBottom: '10px'}}>
-                        <label>Order by:</label>
+                        <label>{t('orderBy')}</label>
                         <select onChange={(e) => handleSortOrderChange(e.target.value)}>
-                            <option value="efficiency">Efficiency</option>
-                            <option value="efficiency_min_hero">Efficiency Min Hero</option>
-                            <option value="efficiency_max_hero">Efficiency Max Hero</option>
-                            <option value="efficiency_min_leg">Efficiency Min Leg</option>
-                            <option value="efficiency_max_leg">Efficiency Max Leg</option>
-                            <option value="tominhero">Gap Min Hero</option>
-                            <option value="tomaxhero">Gap Max Hero</option>
-                            <option value="tominleg">Gap Min Leg</option>
-                            <option value="tomaxleg">Gap Max Leg</option>
+                            <option value="efficiency">{t('efficiency')}</option>
+                            <option value="efficiency_min_hero">{t('efficiencyMinHero')}</option>
+                            <option value="efficiency_max_hero">{t('efficiencyMaxHero')}</option>
+                            <option value="efficiency_min_leg">{t('efficiencyMinLeg')}</option>
+                            <option value="efficiency_max_leg">{t('efficiencyMaxLeg')}</option>
+                            <option value="tominhero">{t('gapMinHero')}</option>
+                            <option value="tomaxhero">{t('gapMaxHero')}</option>
+                            <option value="tominleg">{t('gapMinLeg')}</option>
+                            <option value="tomaxleg">{t('gapMaxLeg')}</option>
                         </select>
                         <button onClick={() => handleSortOrderChange(sortOrder.attribute)}>
-                            {sortOrder.direction === 'asc' ? 'Ascending' : 'Descending'}
+                            {sortOrder.direction === 'asc' ? t('ascending') : t('descending')}
                         </button>
                     </div>
 
                     {/* Select to change items per page */}
                     <div style={{marginTop: '10px'}}>
-                    <label>Items per page: </label>
+                    <label>{t('itemsPerPage')} </label>
                         <select value={itemsPerPage} onChange={handleItemsPerPageChange}>
                             <option value={10}>10</option>
                             <option value={20}>20</option>

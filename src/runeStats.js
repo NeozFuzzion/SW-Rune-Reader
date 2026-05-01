@@ -42,7 +42,8 @@ const runeStats = {
         agemme_max_hero:480,
         agemme_min_leg:400,
         agemme_max_leg:640,
-        name: 'HP'
+        name: 'HP',
+        name_fr: 'PV'
     },
     2: {
         id_stat: 2,
@@ -86,7 +87,8 @@ const runeStats = {
         agemme_max_hero:13,
         agemme_min_leg:9,
         agemme_max_leg:15,
-        name: 'HP%'
+        name: 'HP%',
+        name_fr: 'PV%'
     },
     3: {
         id_stat: 3,
@@ -130,7 +132,8 @@ const runeStats = {
         agemme_max_hero:34,
         agemme_min_leg:28,
         agemme_max_leg:44,
-        name: 'ATK'
+        name: 'ATK',
+        name_fr: 'ATQ'
     },
     4: {
         id_stat: 4,
@@ -174,7 +177,8 @@ const runeStats = {
         agemme_max_hero:13,
         agemme_min_leg:9,
         agemme_max_leg:15,
-        name: 'ATK%'
+        name: 'ATK%',
+        name_fr: 'ATQ%'
     },
     5: {
         id_stat: 5,
@@ -218,7 +222,8 @@ const runeStats = {
         agemme_max_hero:34,
         agemme_min_leg:28,
         agemme_max_leg:44,
-        name: 'DEF'
+        name: 'DEF',
+        name_fr: 'DEF'
     },
     6: {
         id_stat: 6,
@@ -262,7 +267,8 @@ const runeStats = {
         agemme_max_hero:13,
         agemme_min_leg:9,
         agemme_max_leg:15,
-        name: 'DEF%'
+        name: 'DEF%',
+        name_fr: 'DEF%'
     },
     8: {
         id_stat: 8,
@@ -306,7 +312,8 @@ const runeStats = {
         agemme_max_hero:9,
         agemme_min_leg:7,
         agemme_max_leg:11,
-        name: 'SPD'
+        name: 'SPD',
+        name_fr: 'VIT'
     },
     9: {
         id_stat: 9,
@@ -350,7 +357,8 @@ const runeStats = {
         agemme_max_hero:8,
         agemme_min_leg:6,
         agemme_max_leg:10,
-        name: 'CRate'
+        name: 'CRate',
+        name_fr: 'TCrit'
     },
     10: {
         id_stat: 10,
@@ -394,7 +402,8 @@ const runeStats = {
         agemme_max_hero:10,
         agemme_min_leg:7,
         agemme_max_leg:12,
-        name: 'CDmg'
+        name: 'CDmg',
+        name_fr: 'DCrit'
     },
     11: {
         id_stat: 11,
@@ -438,7 +447,8 @@ const runeStats = {
         agemme_max_hero:11,
         agemme_min_leg:8,
         agemme_max_leg:13,
-        name: 'RES'
+        name: 'RES',
+        name_fr: 'RES'
     },
     12: {
         id_stat: 12,
@@ -482,7 +492,8 @@ const runeStats = {
         agemme_max_hero:11,
         agemme_min_leg:8,
         agemme_max_leg:13,
-        name: 'ACC'
+        name: 'ACC',
+        name_fr: 'PREC'
     }
 };
 
