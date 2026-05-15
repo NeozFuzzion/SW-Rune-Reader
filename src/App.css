@@ -907,3 +907,44 @@ input[type="file"]:focus {
     padding: 60px 20px;
     color: #8395a7;
 }
+
+/* Substat requirements */
+.filter-rule-field-wide {
+    min-width: 100%;
+    flex-basis: 100%;
+}
+
+.filter-substat-reqs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-substat-req-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-substat-select {
+    min-width: 150px;
+    flex: 1;
+}
+
+.filter-substat-req-delete {
+    all: unset;
+    color: #8395a7;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px 8px;
+    margin-left: 0;
+}
+
+.filter-substat-req-delete:hover {
+    color: #ff6b6b;
+}
+
+.filter-btn-small {
+    font-size: 11px;
+    padding: 5px 10px;
+}

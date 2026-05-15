@@ -48,8 +48,7 @@ const DEFAULT_RULE = {
     maxLevel: 15,
     metric: 'efficiency',
     minValue: 0,
-    substats: [],     // required substats (at least N of these)
-    minSubstatCount: 0,
+    substatReqs: [],  // [{statId, minValue}] — each substat must meet its min value
 };
 
 const RuneFilterPage = () => {
@@ -218,11 +217,23 @@ const RuneFilterPage = () => {
                 const metricValue = rune[rule.metric] || 0;
                 if (metricValue < rule.minValue) continue;
 
-                // Check required substats
-                if (rule.substats && rule.substats.length > 0 && rule.minSubstatCount > 0) {
-                    const runeSubstats = [rune.sub1_id, rune.sub2_id, rune.sub3_id, rune.sub4_id].filter(Boolean);
-                    const matchCount = rule.substats.filter(s => runeSubstats.includes(s)).length;
-                    if (matchCount < rule.minSubstatCount) continue;
+                // Check substat requirements (each required substat must be present with min value)
+                if (rule.substatReqs && rule.substatReqs.length > 0) {
+                    let allSubstatsMet = true;
+                    for (const req of rule.substatReqs) {
+                        let found = false;
+                        for (let i = 1; i <= 4; i++) {
+                            if (rune[`sub${i}_id`] === req.statId) {
+                                const total = (rune[`sub${i}_stat`] || 0) + (rune[`sub${i}_grind`] || 0);
+                                if (total >= req.minValue) {
+                                    found = true;
+                                }
+                                break;
+                            }
+                        }
+                        if (!found) { allSubstatsMet = false; break; }
+                    }
+                    if (!allSubstatsMet) continue;
                 }
 
                 shouldKeep = true;
@@ -334,26 +345,52 @@ const RuneFilterPage = () => {
                                         min={0} max={200} step={1}
                                     />
                                 </div>
-                                <div className="filter-rule-field">
-                                    <label>{t('requiredSubstats')}</label>
-                                    <Select
-                                        isMulti
-                                        options={statOptions}
-                                        value={statOptions.filter(o => (rule.substats || []).includes(o.value))}
-                                        onChange={(val) => updateRule(ruleIdx, 'substats', (val || []).map(v => v.value))}
-                                        styles={customStyles}
-                                        placeholder={t('anySubstats')}
-                                    />
-                                </div>
-                                <div className="filter-rule-field filter-rule-field-small">
-                                    <label>{t('minSubstatCount')}</label>
-                                    <input
-                                        type="number"
-                                        className="filter-number-input"
-                                        value={rule.minSubstatCount}
-                                        onChange={(e) => updateRule(ruleIdx, 'minSubstatCount', Number(e.target.value))}
-                                        min={0} max={4} step={1}
-                                    />
+                                <div className="filter-rule-field filter-rule-field-wide">
+                                    <label>{t('substatRequirements')}</label>
+                                    <div className="filter-substat-reqs">
+                                        {(rule.substatReqs || []).map((req, reqIdx) => (
+                                            <div key={reqIdx} className="filter-substat-req-row">
+                                                <Select
+                                                    options={statOptions}
+                                                    value={statOptions.find(o => o.value === req.statId) || null}
+                                                    onChange={(val) => {
+                                                        const reqs = [...(rule.substatReqs || [])];
+                                                        reqs[reqIdx] = { ...reqs[reqIdx], statId: val?.value || 0 };
+                                                        updateRule(ruleIdx, 'substatReqs', reqs);
+                                                    }}
+                                                    styles={customStyles}
+                                                    placeholder={t('chooseStat')}
+                                                    className="filter-substat-select"
+                                                />
+                                                <input
+                                                    type="number"
+                                                    className="filter-number-input"
+                                                    value={req.minValue}
+                                                    onChange={(e) => {
+                                                        const reqs = [...(rule.substatReqs || [])];
+                                                        reqs[reqIdx] = { ...reqs[reqIdx], minValue: Number(e.target.value) };
+                                                        updateRule(ruleIdx, 'substatReqs', reqs);
+                                                    }}
+                                                    min={0} step={1}
+                                                    placeholder="Min"
+                                                />
+                                                <button
+                                                    className="filter-substat-req-delete"
+                                                    onClick={() => {
+                                                        const reqs = (rule.substatReqs || []).filter((_, i) => i !== reqIdx);
+                                                        updateRule(ruleIdx, 'substatReqs', reqs);
+                                                    }}
+                                                >×</button>
+                                            </div>
+                                        ))}
+                                        <button
+                                            className="filter-btn filter-btn-small"
+                                            onClick={() => {
+                                                const reqs = [...(rule.substatReqs || []), { statId: 0, minValue: 0 }];
+                                                updateRule(ruleIdx, 'substatReqs', reqs);
+                                            }}
+                                        >+ {t('addSubstatReq')}</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
