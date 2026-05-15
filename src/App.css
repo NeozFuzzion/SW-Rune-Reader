@@ -948,3 +948,25 @@ input[type="file"]:focus {
     font-size: 11px;
     padding: 5px 10px;
 }
+
+/* Grind toggle */
+.filter-grind-toggle {
+    all: unset;
+    font-size: 12px;
+    padding: 5px 8px;
+    border: 1px solid #3a3f4b;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 0;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.filter-grind-toggle:hover {
+    border-color: #61dafb;
+}
+
+.filter-grind-toggle.active {
+    border-color: #1dd1a1;
+    background-color: rgba(29, 209, 161, 0.1);
+}

@@ -224,7 +224,9 @@ const RuneFilterPage = () => {
                         let found = false;
                         for (let i = 1; i <= 4; i++) {
                             if (rune[`sub${i}_id`] === req.statId) {
-                                const total = (rune[`sub${i}_stat`] || 0) + (rune[`sub${i}_grind`] || 0);
+                                const base = rune[`sub${i}_stat`] || 0;
+                                const grind = rune[`sub${i}_grind`] || 0;
+                                const total = req.includeGrind ? base + grind : base;
                                 if (total >= req.minValue) {
                                     found = true;
                                 }
@@ -375,6 +377,17 @@ const RuneFilterPage = () => {
                                                     placeholder="Min"
                                                 />
                                                 <button
+                                                    className={`filter-grind-toggle ${req.includeGrind ? 'active' : ''}`}
+                                                    onClick={() => {
+                                                        const reqs = [...(rule.substatReqs || [])];
+                                                        reqs[reqIdx] = { ...reqs[reqIdx], includeGrind: !reqs[reqIdx].includeGrind };
+                                                        updateRule(ruleIdx, 'substatReqs', reqs);
+                                                    }}
+                                                    title={req.includeGrind ? t('withGrind') : t('withoutGrind')}
+                                                >
+                                                    {req.includeGrind ? '⚙️' : '🚫⚙️'}
+                                                </button>
+                                                <button
                                                     className="filter-substat-req-delete"
                                                     onClick={() => {
                                                         const reqs = (rule.substatReqs || []).filter((_, i) => i !== reqIdx);
@@ -386,7 +399,7 @@ const RuneFilterPage = () => {
                                         <button
                                             className="filter-btn filter-btn-small"
                                             onClick={() => {
-                                                const reqs = [...(rule.substatReqs || []), { statId: 0, minValue: 0 }];
+                                                const reqs = [...(rule.substatReqs || []), { statId: 0, minValue: 0, includeGrind: true }];
                                                 updateRule(ruleIdx, 'substatReqs', reqs);
                                             }}
                                         >+ {t('addSubstatReq')}</button>
