@@ -96,18 +96,6 @@ const RuneFilterPage = () => {
         localStorage.setItem('rune_filter_presets', JSON.stringify(newPresets));
     }, []);
 
-    const getSetName = useCallback((setId) => {
-        const s = runeSets[setId];
-        if (!s) return `Set ${setId}`;
-        return lang === 'fr' && s.name_fr ? s.name_fr : s.name;
-    }, [lang]);
-
-    const getStatName = useCallback((statId) => {
-        const s = runeStats[statId];
-        if (!s) return '?';
-        return lang === 'fr' && s.name_fr ? s.name_fr : s.name;
-    }, [lang]);
-
     const setNameOptions = useMemo(() =>
         Object.values(runeSets).map(s => ({ value: s.id_set, label: lang === 'fr' && s.name_fr ? s.name_fr : s.name })),
     [lang]);
@@ -127,7 +115,7 @@ const RuneFilterPage = () => {
 
     // Current preset
     const currentPreset = presets[activePresetIndex] || null;
-    const currentRules = currentPreset?.rules || [];
+    const currentRules = useMemo(() => currentPreset?.rules || [], [currentPreset]);
 
     // Add a new preset
     const addPreset = () => {
