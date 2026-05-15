@@ -2,6 +2,7 @@ import './App.css';
 import { HashRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import JsonUploader from "./components/uploader";
 import RuneStatsPage from "./components/rune_stats_page";
+import RuneFilterPage from "./components/rune_filter_page";
 import { I18nProvider, useI18n } from './i18n';
 
 function AppContent() {
@@ -34,11 +35,15 @@ function AppContent() {
                     <NavLink to="/stats" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>
                         {t('navStats')}
                     </NavLink>
+                    <NavLink to="/filter" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>
+                        {t('navFilter')}
+                    </NavLink>
                 </nav>
             </header>
             <Routes>
                 <Route path="/" element={<JsonUploader />} />
                 <Route path="/stats" element={<RuneStatsPage />} />
+                <Route path="/filter" element={<RuneFilterPage />} />
             </Routes>
         </div>
     );
